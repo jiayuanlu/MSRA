@@ -2,13 +2,29 @@
 
 project_handin_Lab2
 
-硬件环境  | CPU（vCPU数目）  | 表头
-------- | GPU(型号，数目) | ------  
-软件环境  | OS版本 | 单元格内容 
-----  | 深度学习框架python包名称及版本 | 单元格内容  
-----  | CUDA版本 |  --
+## 实验报告（Lab2）
 
-## 实验报告
+### 代码功能介绍
+
+1.	PyTorch原有张量运算Linear
+
+    代码名称：`mnist_basic.py`
+
+2.	基于Python API实现定制化张量运算Linear
+
+    代码名称：`linear_handin.py`
+
+3.	基于C++ API实现定制化张量运算Linear
+
+    代码名称：`linear_handin_cpp.py`
+
+4.	基于Python API实现定制化张量运算Linear+Conv2d
+
+    代码名称：`linear_multiconv2d_handin.py`
+
+5.	基于C++ API实现定制化张量运算Linear+Conv2d
+
+    代码名称：`linear_multiconv2d_handin_cpp.py`
 
 ### 实验环境
 
@@ -22,15 +38,27 @@ project_handin_Lab2
 ||CUDA版本|&nbsp; &nbsp; CUDA Version 11.0.228|
 ||||
 
-### 实验结果
+### 实验结果1（Linear层为例）
 
-|||
-|---------------|---------------------------|
-| 实现方式（Linear层为例）| &nbsp; &nbsp; &nbsp; &nbsp; 性能评测 |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;||
-|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;||
-||||
+|||||||
+|---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
+|||| &nbsp; &nbsp; &nbsp; 性能评测 |
+| 实现方式（Linear层为例）| &nbsp; epoch | train_time/epoch | test_time/epoch | test_loss/epoch | test_acc/epoch |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||||
+|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||||
+||||||||
+
+### 实验结果2（Linear+Conv2d层为例）
+
+|||||||
+|---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
+|||| &nbsp; &nbsp; &nbsp; 性能评测 |
+| 实现方式（Linear+Conv2d层为例）| &nbsp; epoch | train_time/epoch | test_time/epoch | test_loss/epoch | test_acc/epoch |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.1101 &nbsp;|&nbsp; 9656/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
+|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.1103 &nbsp;|&nbsp; 9652/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
+||||||||
 
 # Lab 2 - 定制一个新的张量运算
 
@@ -81,50 +109,6 @@ project_handin_Lab2
 6.	使用profiler比较网络性能：比较原有张量运算和两种自定义张量运算的性能
 
 7.	【可选实验，加分】实现卷积层（Convolutional）的自定义张量运算
-
-
-## 实验报告
-
-### 实验环境
-
-||||
-|--------|--------------|--------------------------|
-|硬件环境|CPU（vCPU数目）|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-||GPU(型号，数目)||
-|软件环境|OS版本||
-||深度学习框架<br>python包名称及版本||
-||CUDA版本||
-||||
-
-### 实验结果
-
-|||
-|---------------|---------------------------|
-| 实现方式（Linear层为例）| &nbsp; &nbsp; &nbsp; &nbsp; 性能评测 |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;||
-|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;||
-||||
-
-## 参考代码
-
-1.	基于Python API实现定制化张量运算Linear
-
-    代码位置：`Lab2/mnist_custom_linear.py`
-
-    运行命令：`python mnist_custom_linear.py`
-
-2.	基于C++ API实现定制化张量运算Linear
-
-    代码位置：`Lab2/mnist_custom_linear_cpp.py`
-
-    运行命令：
-    ```
-    cd mylinear_cpp_extension
-    python setup.py install --user
-    cd ..
-    python mnist_custom_linear_cpp.py
-    ```
 
 ## 参考资料
 

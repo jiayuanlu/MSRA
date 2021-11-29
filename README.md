@@ -8,11 +8,11 @@ project_handin_Lab2
 
 1.	PyTorch原有张量运算Linear
 
-    代码名称：`mnist_basic.py`
+    代码名称：`mnist_profiler.py`
 
 2.	基于Python API实现定制化张量运算Linear
 
-    代码名称：`linear_handin.py`
+    代码名称：`linear_handin_py.py`
 
 3.	基于C++ API实现定制化张量运算Linear
 
@@ -44,9 +44,9 @@ project_handin_Lab2
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
 | 实现方式（Linear层为例）| &nbsp; epoch | train_time/epoch | test_time/epoch | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||||
-|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||||
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.0295 &nbsp;|&nbsp; 9895/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.0272 &nbsp;|&nbsp; 9909/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 ||||||||
 
 ### 实验结果2（Linear+Conv2d层为例）
@@ -55,10 +55,12 @@ project_handin_Lab2
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
 | 实现方式（Linear+Conv2d层为例）| &nbsp; epoch | train_time/epoch | test_time/epoch | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 |<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.1101 &nbsp;|&nbsp; 9656/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
 |<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;|||&nbsp; &nbsp; &nbsp; 0.1103 &nbsp;|&nbsp; 9652/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
 ||||||||
+
+### 实验总结及思考
 
 # Lab 2 - 定制一个新的张量运算
 

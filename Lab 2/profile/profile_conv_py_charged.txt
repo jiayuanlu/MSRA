@@ -1,0 +1,1501 @@
+Start profiling...
+multiconv2d_handin.py:44: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  channel0_y=torch.range(y_min,y_max).cuda(0)
+multiconv2d_handin.py:46: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  channel0_x=torch.range(x_min,x_max).cuda(0)
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     aten::select         0.12%      13.126us         0.14%      15.190us      15.190us             1  
+                 aten::as_strided         0.02%       2.064us         0.02%       2.064us       2.064us             1  
+                    aten::reshape         0.04%       4.138us         0.07%       7.585us       7.585us             1  
+                       aten::view         0.03%       3.447us         0.03%       3.447us       3.447us             1  
+                    aten::sigmoid         0.29%      31.892us         0.73%      81.350us      81.350us             1  
+                      aten::empty         0.01%       1.491us         0.01%       1.491us       1.491us             1  
+                    aten::sigmoid         0.34%      37.868us         0.43%      47.967us      47.967us             1  
+                    aten::resize_         0.09%      10.099us         0.09%      10.099us      10.099us             1  
+                        aten::mul         0.26%      28.944us         0.27%      30.500us      30.500us             1  
+                      aten::empty         0.01%       1.556us         0.01%       1.556us       1.556us             1  
+                        aten::add         0.23%      25.729us         0.24%      26.874us      26.874us             1  
+                      aten::empty         0.01%       1.145us         0.01%       1.145us       1.145us             1  
+                        aten::mul         0.11%      12.380us         0.12%      13.568us      13.568us             1  
+                      aten::empty         0.01%       1.188us         0.01%       1.188us       1.188us             1  
+                        aten::add         0.06%       6.719us         0.15%      16.818us      16.818us             1  
+                      aten::empty         0.09%      10.099us         0.09%      10.099us      10.099us             1  
+                         aten::to         0.01%       0.591us         0.01%       0.591us       0.591us             1  
+                        aten::div         0.18%      19.875us         0.19%      21.061us      21.061us             1  
+                      aten::empty         0.01%       1.186us         0.01%       1.186us       1.186us             1  
+                      aten::range         0.07%       7.587us         0.16%      17.881us      17.881us             1  
+                      aten::empty         0.01%       1.191us         0.01%       1.191us       1.191us             1  
+                      aten::range         0.07%       7.841us         0.08%       9.103us       9.103us             1  
+                    aten::resize_         0.01%       1.262us         0.01%       1.262us       1.262us             1  
+                         aten::to         0.06%       6.203us         0.26%      28.867us      28.867us             1  
+              aten::empty_strided         0.06%       6.287us         0.06%       6.287us       6.287us             1  
+                      aten::copy_         0.15%      16.377us         0.15%      16.377us      16.377us             1  
+                       aten::view         0.03%       3.716us         0.03%       3.716us       3.716us             1  
+                     aten::repeat         0.16%      18.045us         0.60%      66.959us      66.959us             1  
+                     aten::expand         0.02%       2.069us         0.03%       3.023us       3.023us             1  
+                 aten::as_strided         0.01%       0.954us         0.01%       0.954us       0.954us             1  
+                      aten::empty         0.02%       2.081us         0.02%       2.081us       2.081us             1  
+                      aten::alias         0.02%       1.758us         0.02%       1.758us       1.758us             1  
+                     aten::unfold         0.04%       4.815us         0.06%       6.464us       6.464us             1  
+                     aten::stride         0.00%       0.231us         0.00%       0.231us       0.231us             1  
+                     aten::stride         0.00%       0.143us         0.00%       0.143us       0.143us             1  
+                     aten::stride         0.00%       0.172us         0.00%       0.172us       0.172us             1  
+                     aten::stride         0.00%       0.124us         0.00%       0.124us       0.124us             1  
+                     aten::stride         0.00%       0.118us         0.00%       0.118us       0.118us             1  
+                 aten::as_strided         0.01%       0.861us         0.01%       0.861us       0.861us             1  
+                     aten::unfold         0.03%       3.195us         0.04%       4.659us       4.659us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.119us         0.00%       0.119us       0.119us             1  
+                     aten::stride         0.00%       0.133us         0.00%       0.133us       0.133us             1  
+                     aten::stride         0.00%       0.134us         0.00%       0.134us       0.134us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                 aten::as_strided         0.01%       0.718us         0.01%       0.718us       0.718us             1  
+                     aten::unfold         0.02%       2.581us         0.04%       4.230us       4.230us             1  
+                     aten::stride         0.00%       0.124us         0.00%       0.124us       0.124us             1  
+                     aten::stride         0.00%       0.117us         0.00%       0.117us       0.117us             1  
+                     aten::stride         0.00%       0.118us         0.00%       0.118us       0.118us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.118us         0.00%       0.118us       0.118us             1  
+                     aten::stride         0.00%       0.118us         0.00%       0.118us       0.118us             1  
+                     aten::stride         0.00%       0.556us         0.00%       0.556us       0.556us             1  
+                 aten::as_strided         0.00%       0.378us         0.00%       0.378us       0.378us             1  
+                     aten::unfold         0.03%       2.830us         0.04%       4.782us       4.782us             1  
+                     aten::stride         0.00%       0.123us         0.00%       0.123us       0.123us             1  
+                     aten::stride         0.00%       0.122us         0.00%       0.122us       0.122us             1  
+                     aten::stride         0.00%       0.117us         0.00%       0.117us       0.117us             1  
+                     aten::stride         0.00%       0.119us         0.00%       0.119us       0.119us             1  
+                     aten::stride         0.00%       0.119us         0.00%       0.119us       0.119us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.121us         0.00%       0.121us       0.121us             1  
+                 aten::as_strided         0.01%       0.991us         0.01%       0.991us       0.991us             1  
+                  aten::expand_as         0.01%       0.960us         0.03%       2.802us       2.802us             1  
+                     aten::expand         0.01%       0.770us         0.02%       1.842us       1.842us             1  
+                 aten::as_strided         0.01%       1.072us         0.01%       1.072us       1.072us             1  
+                      aten::copy_         0.17%      19.115us         0.17%      19.115us      19.115us             1  
+                      aten::range         0.02%       1.712us         0.05%       5.742us       5.742us             1  
+                      aten::empty         0.01%       0.891us         0.01%       0.891us       0.891us             1  
+                      aten::range         0.02%       2.320us         0.03%       3.139us       3.139us             1  
+                    aten::resize_         0.01%       0.819us         0.01%       0.819us       0.819us             1  
+                         aten::to         0.01%       1.663us         0.15%      16.170us      16.170us             1  
+              aten::empty_strided         0.04%       3.910us         0.04%       3.910us       3.910us             1  
+                      aten::copy_         0.10%      10.597us         0.10%      10.597us      10.597us             1  
+                       aten::view         0.02%       2.391us         0.02%       2.391us       2.391us             1  
+                     aten::repeat         0.06%       6.389us         0.32%      35.694us      35.694us             1  
+                     aten::expand         0.01%       0.756us         0.01%       1.232us       1.232us             1  
+                 aten::as_strided         0.00%       0.476us         0.00%       0.476us       0.476us             1  
+                      aten::empty         0.01%       1.322us         0.01%       1.322us       1.322us             1  
+                      aten::alias         0.01%       0.604us         0.01%       0.604us       0.604us             1  
+                     aten::unfold         0.02%       2.446us         0.03%       3.664us       3.664us             1  
+                     aten::stride         0.00%       0.234us         0.00%       0.234us       0.234us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.119us         0.00%       0.119us       0.119us             1  
+                     aten::stride         0.00%       0.116us         0.00%       0.116us       0.116us             1  
+                 aten::as_strided         0.00%       0.509us         0.00%       0.509us       0.509us             1  
+                     aten::unfold         0.03%       2.821us         0.04%       3.991us       3.991us             1  
+                     aten::stride         0.00%       0.123us         0.00%       0.123us       0.123us             1  
+                     aten::stride         0.00%       0.120us         0.00%       0.120us       0.120us             1  
+                     aten::stride         0.00%       0.122us         0.00%       0.122us       0.122us             1  
+                     aten::stride         0.00%       0.119us         0.00%       0.119us       0.119us             1  
+                     aten::stride         0.00%       0.130us         0.00%       0.130us       0.130us             1  
+                     aten::stride         0.00%       0.122us         0.00%       0.122us       0.122us             1  
+                 aten::as_strided         0.00%       0.434us         0.00%       0.434us       0.434us             1  
+                     aten::unfold         0.03%       3.103us         0.04%       4.651us       4.651us             1  
+                     aten::stride         0.00%       0.126us         0.00%       0.126us       0.126us             1  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 11.129ms
+
+Finished profiling.
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.305345
+Train Epoch: 1 [640/60000 (1%)]	Loss: 1.993038
+Train Epoch: 1 [1280/60000 (2%)]	Loss: 1.511900
+Train Epoch: 1 [1920/60000 (3%)]	Loss: 1.147280
+Train Epoch: 1 [2560/60000 (4%)]	Loss: 0.946964
+Train Epoch: 1 [3200/60000 (5%)]	Loss: 0.816240
+Train Epoch: 1 [3840/60000 (6%)]	Loss: 0.774111
+Train Epoch: 1 [4480/60000 (7%)]	Loss: 0.654018
+Train Epoch: 1 [5120/60000 (9%)]	Loss: 0.752956
+Train Epoch: 1 [5760/60000 (10%)]	Loss: 0.512164
+Train Epoch: 1 [6400/60000 (11%)]	Loss: 0.586008
+Train Epoch: 1 [7040/60000 (12%)]	Loss: 0.514238
+Train Epoch: 1 [7680/60000 (13%)]	Loss: 0.495134
+Train Epoch: 1 [8320/60000 (14%)]	Loss: 0.367216
+Train Epoch: 1 [8960/60000 (15%)]	Loss: 0.638478
+Train Epoch: 1 [9600/60000 (16%)]	Loss: 0.633845
+Train Epoch: 1 [10240/60000 (17%)]	Loss: 0.536096
+Train Epoch: 1 [10880/60000 (18%)]	Loss: 0.438041
+Train Epoch: 1 [11520/60000 (19%)]	Loss: 0.657261
+Train Epoch: 1 [12160/60000 (20%)]	Loss: 0.670793
+Train Epoch: 1 [12800/60000 (21%)]	Loss: 0.385033
+Train Epoch: 1 [13440/60000 (22%)]	Loss: 0.532655
+Train Epoch: 1 [14080/60000 (23%)]	Loss: 0.298940
+Train Epoch: 1 [14720/60000 (25%)]	Loss: 0.570629
+Train Epoch: 1 [15360/60000 (26%)]	Loss: 0.427623
+Train Epoch: 1 [16000/60000 (27%)]	Loss: 0.657456
+Train Epoch: 1 [16640/60000 (28%)]	Loss: 0.465560
+Train Epoch: 1 [17280/60000 (29%)]	Loss: 0.325641
+Train Epoch: 1 [17920/60000 (30%)]	Loss: 0.454951
+Train Epoch: 1 [18560/60000 (31%)]	Loss: 0.657972
+Train Epoch: 1 [19200/60000 (32%)]	Loss: 0.779441
+Train Epoch: 1 [19840/60000 (33%)]	Loss: 0.620518
+Train Epoch: 1 [20480/60000 (34%)]	Loss: 0.413622
+Train Epoch: 1 [21120/60000 (35%)]	Loss: 0.671274
+Train Epoch: 1 [21760/60000 (36%)]	Loss: 0.451528
+Train Epoch: 1 [22400/60000 (37%)]	Loss: 0.403181
+Train Epoch: 1 [23040/60000 (38%)]	Loss: 0.457818
+Train Epoch: 1 [23680/60000 (39%)]	Loss: 0.391968
+Train Epoch: 1 [24320/60000 (41%)]	Loss: 0.330575
+Train Epoch: 1 [24960/60000 (42%)]	Loss: 0.612744
+Train Epoch: 1 [25600/60000 (43%)]	Loss: 0.322563
+Train Epoch: 1 [26240/60000 (44%)]	Loss: 0.513064
+Train Epoch: 1 [26880/60000 (45%)]	Loss: 0.315986
+Train Epoch: 1 [27520/60000 (46%)]	Loss: 0.461095
+Train Epoch: 1 [28160/60000 (47%)]	Loss: 0.422975
+Train Epoch: 1 [28800/60000 (48%)]	Loss: 0.506326
+Train Epoch: 1 [29440/60000 (49%)]	Loss: 0.441380
+Train Epoch: 1 [30080/60000 (50%)]	Loss: 0.431474
+Train Epoch: 1 [30720/60000 (51%)]	Loss: 0.276679
+Train Epoch: 1 [31360/60000 (52%)]	Loss: 0.431678
+Train Epoch: 1 [32000/60000 (53%)]	Loss: 0.261201
+Train Epoch: 1 [32640/60000 (54%)]	Loss: 0.299673
+Train Epoch: 1 [33280/60000 (55%)]	Loss: 0.311329
+Train Epoch: 1 [33920/60000 (57%)]	Loss: 0.218411
+Train Epoch: 1 [34560/60000 (58%)]	Loss: 0.470415
+Train Epoch: 1 [35200/60000 (59%)]	Loss: 0.379639
+Train Epoch: 1 [35840/60000 (60%)]	Loss: 0.289066
+Train Epoch: 1 [36480/60000 (61%)]	Loss: 0.488988
+Train Epoch: 1 [37120/60000 (62%)]	Loss: 0.399450
+Train Epoch: 1 [37760/60000 (63%)]	Loss: 0.507798
+Train Epoch: 1 [38400/60000 (64%)]	Loss: 0.222318
+Train Epoch: 1 [39040/60000 (65%)]	Loss: 0.303575
+Train Epoch: 1 [39680/60000 (66%)]	Loss: 0.242195
+Train Epoch: 1 [40320/60000 (67%)]	Loss: 0.362815
+Train Epoch: 1 [40960/60000 (68%)]	Loss: 0.348532
+Train Epoch: 1 [41600/60000 (69%)]	Loss: 0.430573
+Train Epoch: 1 [42240/60000 (70%)]	Loss: 0.248888
+Train Epoch: 1 [42880/60000 (71%)]	Loss: 0.254360
+Train Epoch: 1 [43520/60000 (72%)]	Loss: 0.310666
+Train Epoch: 1 [44160/60000 (74%)]	Loss: 0.362241
+Train Epoch: 1 [44800/60000 (75%)]	Loss: 0.337288
+Train Epoch: 1 [45440/60000 (76%)]	Loss: 0.277935
+Train Epoch: 1 [46080/60000 (77%)]	Loss: 0.278808
+Train Epoch: 1 [46720/60000 (78%)]	Loss: 0.244530
+Train Epoch: 1 [47360/60000 (79%)]	Loss: 0.172105
+Train Epoch: 1 [48000/60000 (80%)]	Loss: 0.339995
+Train Epoch: 1 [48640/60000 (81%)]	Loss: 0.315250
+Train Epoch: 1 [49280/60000 (82%)]	Loss: 0.237972
+Train Epoch: 1 [49920/60000 (83%)]	Loss: 0.168166
+Train Epoch: 1 [50560/60000 (84%)]	Loss: 0.570441
+Train Epoch: 1 [51200/60000 (85%)]	Loss: 0.426117
+Train Epoch: 1 [51840/60000 (86%)]	Loss: 0.567127
+Train Epoch: 1 [52480/60000 (87%)]	Loss: 0.283898
+Train Epoch: 1 [53120/60000 (88%)]	Loss: 0.211635
+Train Epoch: 1 [53760/60000 (90%)]	Loss: 0.193811
+Train Epoch: 1 [54400/60000 (91%)]	Loss: 0.352195
+Train Epoch: 1 [55040/60000 (92%)]	Loss: 0.564029
+Train Epoch: 1 [55680/60000 (93%)]	Loss: 0.398327
+Train Epoch: 1 [56320/60000 (94%)]	Loss: 0.510782
+Train Epoch: 1 [56960/60000 (95%)]	Loss: 0.698512
+Train Epoch: 1 [57600/60000 (96%)]	Loss: 0.297228
+Train Epoch: 1 [58240/60000 (97%)]	Loss: 0.333685
+Train Epoch: 1 [58880/60000 (98%)]	Loss: 0.303657
+Train Epoch: 1 [59520/60000 (99%)]	Loss: 0.270396
+5.1238627433776855
+
+Test set: Average loss: 0.2058, Accuracy: 9367/10000 (94%)
+
+0.8223459720611572
+Train Epoch: 2 [0/60000 (0%)]	Loss: 0.192826
+Train Epoch: 2 [640/60000 (1%)]	Loss: 0.552255
+Train Epoch: 2 [1280/60000 (2%)]	Loss: 0.342910
+Train Epoch: 2 [1920/60000 (3%)]	Loss: 0.184262
+Train Epoch: 2 [2560/60000 (4%)]	Loss: 0.250384
+Train Epoch: 2 [3200/60000 (5%)]	Loss: 0.347217
+Train Epoch: 2 [3840/60000 (6%)]	Loss: 0.284551
+Train Epoch: 2 [4480/60000 (7%)]	Loss: 0.303047
+Train Epoch: 2 [5120/60000 (9%)]	Loss: 0.277918
+Train Epoch: 2 [5760/60000 (10%)]	Loss: 0.467876
+Train Epoch: 2 [6400/60000 (11%)]	Loss: 0.213282
+Train Epoch: 2 [7040/60000 (12%)]	Loss: 0.100048
+Train Epoch: 2 [7680/60000 (13%)]	Loss: 0.175723
+Train Epoch: 2 [8320/60000 (14%)]	Loss: 0.275547
+Train Epoch: 2 [8960/60000 (15%)]	Loss: 0.246071
+Train Epoch: 2 [9600/60000 (16%)]	Loss: 0.275438
+Train Epoch: 2 [10240/60000 (17%)]	Loss: 0.256888
+Train Epoch: 2 [10880/60000 (18%)]	Loss: 0.211765
+Train Epoch: 2 [11520/60000 (19%)]	Loss: 0.136238
+Train Epoch: 2 [12160/60000 (20%)]	Loss: 0.270946
+Train Epoch: 2 [12800/60000 (21%)]	Loss: 0.223684
+Train Epoch: 2 [13440/60000 (22%)]	Loss: 0.352717
+Train Epoch: 2 [14080/60000 (23%)]	Loss: 0.152657
+Train Epoch: 2 [14720/60000 (25%)]	Loss: 0.285306
+Train Epoch: 2 [15360/60000 (26%)]	Loss: 0.186315
+Train Epoch: 2 [16000/60000 (27%)]	Loss: 0.282635
+Train Epoch: 2 [16640/60000 (28%)]	Loss: 0.307754
+Train Epoch: 2 [17280/60000 (29%)]	Loss: 0.315396
+Train Epoch: 2 [17920/60000 (30%)]	Loss: 0.228110
+Train Epoch: 2 [18560/60000 (31%)]	Loss: 0.218662
+Train Epoch: 2 [19200/60000 (32%)]	Loss: 0.339997
+Train Epoch: 2 [19840/60000 (33%)]	Loss: 0.560403
+Train Epoch: 2 [20480/60000 (34%)]	Loss: 0.203616
+Train Epoch: 2 [21120/60000 (35%)]	Loss: 0.397385
+Train Epoch: 2 [21760/60000 (36%)]	Loss: 0.257235
+Train Epoch: 2 [22400/60000 (37%)]	Loss: 0.089532
+Train Epoch: 2 [23040/60000 (38%)]	Loss: 0.296725
+Train Epoch: 2 [23680/60000 (39%)]	Loss: 0.171214
+Train Epoch: 2 [24320/60000 (41%)]	Loss: 0.473551
+Train Epoch: 2 [24960/60000 (42%)]	Loss: 0.261044
+Train Epoch: 2 [25600/60000 (43%)]	Loss: 0.237317
+Train Epoch: 2 [26240/60000 (44%)]	Loss: 0.589159
+Train Epoch: 2 [26880/60000 (45%)]	Loss: 0.220790
+Train Epoch: 2 [27520/60000 (46%)]	Loss: 0.317928
+Train Epoch: 2 [28160/60000 (47%)]	Loss: 0.223905
+Train Epoch: 2 [28800/60000 (48%)]	Loss: 0.222255
+Train Epoch: 2 [29440/60000 (49%)]	Loss: 0.242078
+Train Epoch: 2 [30080/60000 (50%)]	Loss: 0.446150
+Train Epoch: 2 [30720/60000 (51%)]	Loss: 0.358836
+Train Epoch: 2 [31360/60000 (52%)]	Loss: 0.428640
+Train Epoch: 2 [32000/60000 (53%)]	Loss: 0.319816
+Train Epoch: 2 [32640/60000 (54%)]	Loss: 0.308469
+Train Epoch: 2 [33280/60000 (55%)]	Loss: 0.285363
+Train Epoch: 2 [33920/60000 (57%)]	Loss: 0.255043
+Train Epoch: 2 [34560/60000 (58%)]	Loss: 0.409933
+Train Epoch: 2 [35200/60000 (59%)]	Loss: 0.491892
+Train Epoch: 2 [35840/60000 (60%)]	Loss: 0.316134
+Train Epoch: 2 [36480/60000 (61%)]	Loss: 0.180314
+Train Epoch: 2 [37120/60000 (62%)]	Loss: 0.298438
+Train Epoch: 2 [37760/60000 (63%)]	Loss: 0.513436
+Train Epoch: 2 [38400/60000 (64%)]	Loss: 0.367624
+Train Epoch: 2 [39040/60000 (65%)]	Loss: 0.170460
+Train Epoch: 2 [39680/60000 (66%)]	Loss: 0.142521
+Train Epoch: 2 [40320/60000 (67%)]	Loss: 0.599520
+Train Epoch: 2 [40960/60000 (68%)]	Loss: 0.263566
+Train Epoch: 2 [41600/60000 (69%)]	Loss: 0.224550
+Train Epoch: 2 [42240/60000 (70%)]	Loss: 0.324360
+Train Epoch: 2 [42880/60000 (71%)]	Loss: 0.208479
+Train Epoch: 2 [43520/60000 (72%)]	Loss: 0.203135
+Train Epoch: 2 [44160/60000 (74%)]	Loss: 0.149439
+Train Epoch: 2 [44800/60000 (75%)]	Loss: 0.305260
+Train Epoch: 2 [45440/60000 (76%)]	Loss: 0.319221
+Train Epoch: 2 [46080/60000 (77%)]	Loss: 0.211220
+Train Epoch: 2 [46720/60000 (78%)]	Loss: 0.138517
+Train Epoch: 2 [47360/60000 (79%)]	Loss: 0.488489
+Train Epoch: 2 [48000/60000 (80%)]	Loss: 0.236193
+Train Epoch: 2 [48640/60000 (81%)]	Loss: 0.351535
+Train Epoch: 2 [49280/60000 (82%)]	Loss: 0.095052
+Train Epoch: 2 [49920/60000 (83%)]	Loss: 0.205523
+Train Epoch: 2 [50560/60000 (84%)]	Loss: 0.209879
+Train Epoch: 2 [51200/60000 (85%)]	Loss: 0.236116
+Train Epoch: 2 [51840/60000 (86%)]	Loss: 0.246900
+Train Epoch: 2 [52480/60000 (87%)]	Loss: 0.125586
+Train Epoch: 2 [53120/60000 (88%)]	Loss: 0.075799
+Train Epoch: 2 [53760/60000 (90%)]	Loss: 0.232701
+Train Epoch: 2 [54400/60000 (91%)]	Loss: 0.344859
+Train Epoch: 2 [55040/60000 (92%)]	Loss: 0.177100
+Train Epoch: 2 [55680/60000 (93%)]	Loss: 0.148570
+Train Epoch: 2 [56320/60000 (94%)]	Loss: 0.165418
+Train Epoch: 2 [56960/60000 (95%)]	Loss: 0.351188
+Train Epoch: 2 [57600/60000 (96%)]	Loss: 0.305402
+Train Epoch: 2 [58240/60000 (97%)]	Loss: 0.193283
+Train Epoch: 2 [58880/60000 (98%)]	Loss: 0.209895
+Train Epoch: 2 [59520/60000 (99%)]	Loss: 0.223776
+5.163263320922852
+
+Test set: Average loss: 0.1594, Accuracy: 9525/10000 (95%)
+
+0.826613187789917
+Train Epoch: 3 [0/60000 (0%)]	Loss: 0.218727
+Train Epoch: 3 [640/60000 (1%)]	Loss: 0.191523
+Train Epoch: 3 [1280/60000 (2%)]	Loss: 0.177434
+Train Epoch: 3 [1920/60000 (3%)]	Loss: 0.114079
+Train Epoch: 3 [2560/60000 (4%)]	Loss: 0.147639
+Train Epoch: 3 [3200/60000 (5%)]	Loss: 0.165000
+Train Epoch: 3 [3840/60000 (6%)]	Loss: 0.312594
+Train Epoch: 3 [4480/60000 (7%)]	Loss: 0.224863
+Train Epoch: 3 [5120/60000 (9%)]	Loss: 0.232210
+Train Epoch: 3 [5760/60000 (10%)]	Loss: 0.382736
+Train Epoch: 3 [6400/60000 (11%)]	Loss: 0.344843
+Train Epoch: 3 [7040/60000 (12%)]	Loss: 0.284448
+Train Epoch: 3 [7680/60000 (13%)]	Loss: 0.159546
+Train Epoch: 3 [8320/60000 (14%)]	Loss: 0.223684
+Train Epoch: 3 [8960/60000 (15%)]	Loss: 0.223661
+Train Epoch: 3 [9600/60000 (16%)]	Loss: 0.364691
+Train Epoch: 3 [10240/60000 (17%)]	Loss: 0.220415
+Train Epoch: 3 [10880/60000 (18%)]	Loss: 0.445937
+Train Epoch: 3 [11520/60000 (19%)]	Loss: 0.268946
+Train Epoch: 3 [12160/60000 (20%)]	Loss: 0.291644
+Train Epoch: 3 [12800/60000 (21%)]	Loss: 0.328648
+Train Epoch: 3 [13440/60000 (22%)]	Loss: 0.301195
+Train Epoch: 3 [14080/60000 (23%)]	Loss: 0.237007
+Train Epoch: 3 [14720/60000 (25%)]	Loss: 0.270551
+Train Epoch: 3 [15360/60000 (26%)]	Loss: 0.130073
+Train Epoch: 3 [16000/60000 (27%)]	Loss: 0.220053
+Train Epoch: 3 [16640/60000 (28%)]	Loss: 0.177185
+Train Epoch: 3 [17280/60000 (29%)]	Loss: 0.295862
+Train Epoch: 3 [17920/60000 (30%)]	Loss: 0.191662
+Train Epoch: 3 [18560/60000 (31%)]	Loss: 0.319771
+Train Epoch: 3 [19200/60000 (32%)]	Loss: 0.280951
+Train Epoch: 3 [19840/60000 (33%)]	Loss: 0.291885
+Train Epoch: 3 [20480/60000 (34%)]	Loss: 0.129693
+Train Epoch: 3 [21120/60000 (35%)]	Loss: 0.397293
+Train Epoch: 3 [21760/60000 (36%)]	Loss: 0.293691
+Train Epoch: 3 [22400/60000 (37%)]	Loss: 0.126921
+Train Epoch: 3 [23040/60000 (38%)]	Loss: 0.198777
+Train Epoch: 3 [23680/60000 (39%)]	Loss: 0.119749
+Train Epoch: 3 [24320/60000 (41%)]	Loss: 0.265532
+Train Epoch: 3 [24960/60000 (42%)]	Loss: 0.287669
+Train Epoch: 3 [25600/60000 (43%)]	Loss: 0.314638
+Train Epoch: 3 [26240/60000 (44%)]	Loss: 0.407601
+Train Epoch: 3 [26880/60000 (45%)]	Loss: 0.145473
+Train Epoch: 3 [27520/60000 (46%)]	Loss: 0.132735
+Train Epoch: 3 [28160/60000 (47%)]	Loss: 0.182281
+Train Epoch: 3 [28800/60000 (48%)]	Loss: 0.200643
+Train Epoch: 3 [29440/60000 (49%)]	Loss: 0.120422
+Train Epoch: 3 [30080/60000 (50%)]	Loss: 0.208146
+Train Epoch: 3 [30720/60000 (51%)]	Loss: 0.125951
+Train Epoch: 3 [31360/60000 (52%)]	Loss: 0.350630
+Train Epoch: 3 [32000/60000 (53%)]	Loss: 0.226821
+Train Epoch: 3 [32640/60000 (54%)]	Loss: 0.189810
+Train Epoch: 3 [33280/60000 (55%)]	Loss: 0.176831
+Train Epoch: 3 [33920/60000 (57%)]	Loss: 0.381439
+Train Epoch: 3 [34560/60000 (58%)]	Loss: 0.351636
+Train Epoch: 3 [35200/60000 (59%)]	Loss: 0.360680
+Train Epoch: 3 [35840/60000 (60%)]	Loss: 0.303103
+Train Epoch: 3 [36480/60000 (61%)]	Loss: 0.185783
+Train Epoch: 3 [37120/60000 (62%)]	Loss: 0.147381
+Train Epoch: 3 [37760/60000 (63%)]	Loss: 0.274896
+Train Epoch: 3 [38400/60000 (64%)]	Loss: 0.516347
+Train Epoch: 3 [39040/60000 (65%)]	Loss: 0.189444
+Train Epoch: 3 [39680/60000 (66%)]	Loss: 0.317590
+Train Epoch: 3 [40320/60000 (67%)]	Loss: 0.326956
+Train Epoch: 3 [40960/60000 (68%)]	Loss: 0.315326
+Train Epoch: 3 [41600/60000 (69%)]	Loss: 0.321027
+Train Epoch: 3 [42240/60000 (70%)]	Loss: 0.224462
+Train Epoch: 3 [42880/60000 (71%)]	Loss: 0.333430
+Train Epoch: 3 [43520/60000 (72%)]	Loss: 0.206339
+Train Epoch: 3 [44160/60000 (74%)]	Loss: 0.227819
+Train Epoch: 3 [44800/60000 (75%)]	Loss: 0.213011
+Train Epoch: 3 [45440/60000 (76%)]	Loss: 0.269094
+Train Epoch: 3 [46080/60000 (77%)]	Loss: 0.207746
+Train Epoch: 3 [46720/60000 (78%)]	Loss: 0.178018
+Train Epoch: 3 [47360/60000 (79%)]	Loss: 0.193278
+Train Epoch: 3 [48000/60000 (80%)]	Loss: 0.050775
+Train Epoch: 3 [48640/60000 (81%)]	Loss: 0.189049
+Train Epoch: 3 [49280/60000 (82%)]	Loss: 0.279710
+Train Epoch: 3 [49920/60000 (83%)]	Loss: 0.305904
+Train Epoch: 3 [50560/60000 (84%)]	Loss: 0.175278
+Train Epoch: 3 [51200/60000 (85%)]	Loss: 0.270952
+Train Epoch: 3 [51840/60000 (86%)]	Loss: 0.228766
+Train Epoch: 3 [52480/60000 (87%)]	Loss: 0.151028
+Train Epoch: 3 [53120/60000 (88%)]	Loss: 0.297961
+Train Epoch: 3 [53760/60000 (90%)]	Loss: 0.194404
+Train Epoch: 3 [54400/60000 (91%)]	Loss: 0.110197
+Train Epoch: 3 [55040/60000 (92%)]	Loss: 0.080545
+Train Epoch: 3 [55680/60000 (93%)]	Loss: 0.106511
+Train Epoch: 3 [56320/60000 (94%)]	Loss: 0.228035
+Train Epoch: 3 [56960/60000 (95%)]	Loss: 0.217142
+Train Epoch: 3 [57600/60000 (96%)]	Loss: 0.103616
+Train Epoch: 3 [58240/60000 (97%)]	Loss: 0.312055
+Train Epoch: 3 [58880/60000 (98%)]	Loss: 0.363447
+Train Epoch: 3 [59520/60000 (99%)]	Loss: 0.269182
+5.102416276931763
+
+Test set: Average loss: 0.1390, Accuracy: 9583/10000 (96%)
+
+0.8375365734100342
+Train Epoch: 4 [0/60000 (0%)]	Loss: 0.440624
+Train Epoch: 4 [640/60000 (1%)]	Loss: 0.565023
+Train Epoch: 4 [1280/60000 (2%)]	Loss: 0.164351
+Train Epoch: 4 [1920/60000 (3%)]	Loss: 0.091193
+Train Epoch: 4 [2560/60000 (4%)]	Loss: 0.191850
+Train Epoch: 4 [3200/60000 (5%)]	Loss: 0.265348
+Train Epoch: 4 [3840/60000 (6%)]	Loss: 0.271147
+Train Epoch: 4 [4480/60000 (7%)]	Loss: 0.255786
+Train Epoch: 4 [5120/60000 (9%)]	Loss: 0.453958
+Train Epoch: 4 [5760/60000 (10%)]	Loss: 0.236534
+Train Epoch: 4 [6400/60000 (11%)]	Loss: 0.127270
+Train Epoch: 4 [7040/60000 (12%)]	Loss: 0.130384
+Train Epoch: 4 [7680/60000 (13%)]	Loss: 0.167159
+Train Epoch: 4 [8320/60000 (14%)]	Loss: 0.367248
+Train Epoch: 4 [8960/60000 (15%)]	Loss: 0.275275
+Train Epoch: 4 [9600/60000 (16%)]	Loss: 0.234652
+Train Epoch: 4 [10240/60000 (17%)]	Loss: 0.287187
+Train Epoch: 4 [10880/60000 (18%)]	Loss: 0.127302
+Train Epoch: 4 [11520/60000 (19%)]	Loss: 0.195053
+Train Epoch: 4 [12160/60000 (20%)]	Loss: 0.158470
+Train Epoch: 4 [12800/60000 (21%)]	Loss: 0.149092
+Train Epoch: 4 [13440/60000 (22%)]	Loss: 0.153858
+Train Epoch: 4 [14080/60000 (23%)]	Loss: 0.162243
+Train Epoch: 4 [14720/60000 (25%)]	Loss: 0.365716
+Train Epoch: 4 [15360/60000 (26%)]	Loss: 0.118902
+Train Epoch: 4 [16000/60000 (27%)]	Loss: 0.138496
+Train Epoch: 4 [16640/60000 (28%)]	Loss: 0.067861
+Train Epoch: 4 [17280/60000 (29%)]	Loss: 0.235351
+Train Epoch: 4 [17920/60000 (30%)]	Loss: 0.326030
+Train Epoch: 4 [18560/60000 (31%)]	Loss: 0.391054
+Train Epoch: 4 [19200/60000 (32%)]	Loss: 0.257130
+Train Epoch: 4 [19840/60000 (33%)]	Loss: 0.190400
+Train Epoch: 4 [20480/60000 (34%)]	Loss: 0.179475
+Train Epoch: 4 [21120/60000 (35%)]	Loss: 0.261148
+Train Epoch: 4 [21760/60000 (36%)]	Loss: 0.229329
+Train Epoch: 4 [22400/60000 (37%)]	Loss: 0.231697
+Train Epoch: 4 [23040/60000 (38%)]	Loss: 0.148828
+Train Epoch: 4 [23680/60000 (39%)]	Loss: 0.143521
+Train Epoch: 4 [24320/60000 (41%)]	Loss: 0.177315
+Train Epoch: 4 [24960/60000 (42%)]	Loss: 0.276647
+Train Epoch: 4 [25600/60000 (43%)]	Loss: 0.202889
+Train Epoch: 4 [26240/60000 (44%)]	Loss: 0.365983
+Train Epoch: 4 [26880/60000 (45%)]	Loss: 0.288362
+Train Epoch: 4 [27520/60000 (46%)]	Loss: 0.273041
+Train Epoch: 4 [28160/60000 (47%)]	Loss: 0.170003
+Train Epoch: 4 [28800/60000 (48%)]	Loss: 0.282453
+Train Epoch: 4 [29440/60000 (49%)]	Loss: 0.210417
+Train Epoch: 4 [30080/60000 (50%)]	Loss: 0.126407
+Train Epoch: 4 [30720/60000 (51%)]	Loss: 0.507561
+Train Epoch: 4 [31360/60000 (52%)]	Loss: 0.156095
+Train Epoch: 4 [32000/60000 (53%)]	Loss: 0.437212
+Train Epoch: 4 [32640/60000 (54%)]	Loss: 0.443680
+Train Epoch: 4 [33280/60000 (55%)]	Loss: 0.154453
+Train Epoch: 4 [33920/60000 (57%)]	Loss: 0.157013
+Train Epoch: 4 [34560/60000 (58%)]	Loss: 0.224170
+Train Epoch: 4 [35200/60000 (59%)]	Loss: 0.306702
+Train Epoch: 4 [35840/60000 (60%)]	Loss: 0.226118
+Train Epoch: 4 [36480/60000 (61%)]	Loss: 0.261733
+Train Epoch: 4 [37120/60000 (62%)]	Loss: 0.147527
+Train Epoch: 4 [37760/60000 (63%)]	Loss: 0.112294
+Train Epoch: 4 [38400/60000 (64%)]	Loss: 0.204008
+Train Epoch: 4 [39040/60000 (65%)]	Loss: 0.170398
+Train Epoch: 4 [39680/60000 (66%)]	Loss: 0.171272
+Train Epoch: 4 [40320/60000 (67%)]	Loss: 0.180178
+Train Epoch: 4 [40960/60000 (68%)]	Loss: 0.113725
+Train Epoch: 4 [41600/60000 (69%)]	Loss: 0.321093
+Train Epoch: 4 [42240/60000 (70%)]	Loss: 0.242043
+Train Epoch: 4 [42880/60000 (71%)]	Loss: 0.152399
+Train Epoch: 4 [43520/60000 (72%)]	Loss: 0.471595
+Train Epoch: 4 [44160/60000 (74%)]	Loss: 0.078991
+Train Epoch: 4 [44800/60000 (75%)]	Loss: 0.420929
+Train Epoch: 4 [45440/60000 (76%)]	Loss: 0.083270
+Train Epoch: 4 [46080/60000 (77%)]	Loss: 0.346997
+Train Epoch: 4 [46720/60000 (78%)]	Loss: 0.277096
+Train Epoch: 4 [47360/60000 (79%)]	Loss: 0.256372
+Train Epoch: 4 [48000/60000 (80%)]	Loss: 0.272965
+Train Epoch: 4 [48640/60000 (81%)]	Loss: 0.244354
+Train Epoch: 4 [49280/60000 (82%)]	Loss: 0.195954
+Train Epoch: 4 [49920/60000 (83%)]	Loss: 0.430058
+Train Epoch: 4 [50560/60000 (84%)]	Loss: 0.151514
+Train Epoch: 4 [51200/60000 (85%)]	Loss: 0.251223
+Train Epoch: 4 [51840/60000 (86%)]	Loss: 0.149516
+Train Epoch: 4 [52480/60000 (87%)]	Loss: 0.305347
+Train Epoch: 4 [53120/60000 (88%)]	Loss: 0.063173
+Train Epoch: 4 [53760/60000 (90%)]	Loss: 0.452632
+Train Epoch: 4 [54400/60000 (91%)]	Loss: 0.176115
+Train Epoch: 4 [55040/60000 (92%)]	Loss: 0.142474
+Train Epoch: 4 [55680/60000 (93%)]	Loss: 0.126321
+Train Epoch: 4 [56320/60000 (94%)]	Loss: 0.192715
+Train Epoch: 4 [56960/60000 (95%)]	Loss: 0.339319
+Train Epoch: 4 [57600/60000 (96%)]	Loss: 0.193536
+Train Epoch: 4 [58240/60000 (97%)]	Loss: 0.162725
+Train Epoch: 4 [58880/60000 (98%)]	Loss: 0.167504
+Train Epoch: 4 [59520/60000 (99%)]	Loss: 0.222682
+5.010704755783081
+
+Test set: Average loss: 0.1321, Accuracy: 9594/10000 (96%)
+
+0.8197989463806152
+Train Epoch: 5 [0/60000 (0%)]	Loss: 0.218770
+Train Epoch: 5 [640/60000 (1%)]	Loss: 0.321884
+Train Epoch: 5 [1280/60000 (2%)]	Loss: 0.085871
+Train Epoch: 5 [1920/60000 (3%)]	Loss: 0.306070
+Train Epoch: 5 [2560/60000 (4%)]	Loss: 0.105104
+Train Epoch: 5 [3200/60000 (5%)]	Loss: 0.122836
+Train Epoch: 5 [3840/60000 (6%)]	Loss: 0.193547
+Train Epoch: 5 [4480/60000 (7%)]	Loss: 0.386773
+Train Epoch: 5 [5120/60000 (9%)]	Loss: 0.307536
+Train Epoch: 5 [5760/60000 (10%)]	Loss: 0.138477
+Train Epoch: 5 [6400/60000 (11%)]	Loss: 0.304562
+Train Epoch: 5 [7040/60000 (12%)]	Loss: 0.174616
+Train Epoch: 5 [7680/60000 (13%)]	Loss: 0.163137
+Train Epoch: 5 [8320/60000 (14%)]	Loss: 0.553156
+Train Epoch: 5 [8960/60000 (15%)]	Loss: 0.134250
+Train Epoch: 5 [9600/60000 (16%)]	Loss: 0.145946
+Train Epoch: 5 [10240/60000 (17%)]	Loss: 0.102665
+Train Epoch: 5 [10880/60000 (18%)]	Loss: 0.257321
+Train Epoch: 5 [11520/60000 (19%)]	Loss: 0.234103
+Train Epoch: 5 [12160/60000 (20%)]	Loss: 0.097639
+Train Epoch: 5 [12800/60000 (21%)]	Loss: 0.192519
+Train Epoch: 5 [13440/60000 (22%)]	Loss: 0.224578
+Train Epoch: 5 [14080/60000 (23%)]	Loss: 0.180991
+Train Epoch: 5 [14720/60000 (25%)]	Loss: 0.170950
+Train Epoch: 5 [15360/60000 (26%)]	Loss: 0.212753
+Train Epoch: 5 [16000/60000 (27%)]	Loss: 0.194359
+Train Epoch: 5 [16640/60000 (28%)]	Loss: 0.112759
+Train Epoch: 5 [17280/60000 (29%)]	Loss: 0.044613
+Train Epoch: 5 [17920/60000 (30%)]	Loss: 0.314821
+Train Epoch: 5 [18560/60000 (31%)]	Loss: 0.244422
+Train Epoch: 5 [19200/60000 (32%)]	Loss: 0.128036
+Train Epoch: 5 [19840/60000 (33%)]	Loss: 0.150402
+Train Epoch: 5 [20480/60000 (34%)]	Loss: 0.159030
+Train Epoch: 5 [21120/60000 (35%)]	Loss: 0.092849
+Train Epoch: 5 [21760/60000 (36%)]	Loss: 0.079323
+Train Epoch: 5 [22400/60000 (37%)]	Loss: 0.088928
+Train Epoch: 5 [23040/60000 (38%)]	Loss: 0.098384
+Train Epoch: 5 [23680/60000 (39%)]	Loss: 0.183243
+Train Epoch: 5 [24320/60000 (41%)]	Loss: 0.277100
+Train Epoch: 5 [24960/60000 (42%)]	Loss: 0.279960
+Train Epoch: 5 [25600/60000 (43%)]	Loss: 0.179826
+Train Epoch: 5 [26240/60000 (44%)]	Loss: 0.198481
+Train Epoch: 5 [26880/60000 (45%)]	Loss: 0.112685
+Train Epoch: 5 [27520/60000 (46%)]	Loss: 0.144981
+Train Epoch: 5 [28160/60000 (47%)]	Loss: 0.225768
+Train Epoch: 5 [28800/60000 (48%)]	Loss: 0.324700
+Train Epoch: 5 [29440/60000 (49%)]	Loss: 0.290470
+Train Epoch: 5 [30080/60000 (50%)]	Loss: 0.219255
+Train Epoch: 5 [30720/60000 (51%)]	Loss: 0.123976
+Train Epoch: 5 [31360/60000 (52%)]	Loss: 0.190716
+Train Epoch: 5 [32000/60000 (53%)]	Loss: 0.362823
+Train Epoch: 5 [32640/60000 (54%)]	Loss: 0.149834
+Train Epoch: 5 [33280/60000 (55%)]	Loss: 0.209128
+Train Epoch: 5 [33920/60000 (57%)]	Loss: 0.230622
+Train Epoch: 5 [34560/60000 (58%)]	Loss: 0.328617
+Train Epoch: 5 [35200/60000 (59%)]	Loss: 0.393418
+Train Epoch: 5 [35840/60000 (60%)]	Loss: 0.308595
+Train Epoch: 5 [36480/60000 (61%)]	Loss: 0.213514
+Train Epoch: 5 [37120/60000 (62%)]	Loss: 0.364328
+Train Epoch: 5 [37760/60000 (63%)]	Loss: 0.280135
+Train Epoch: 5 [38400/60000 (64%)]	Loss: 0.101712
+Train Epoch: 5 [39040/60000 (65%)]	Loss: 0.116593
+Train Epoch: 5 [39680/60000 (66%)]	Loss: 0.226210
+Train Epoch: 5 [40320/60000 (67%)]	Loss: 0.123446
+Train Epoch: 5 [40960/60000 (68%)]	Loss: 0.145527
+Train Epoch: 5 [41600/60000 (69%)]	Loss: 0.298021
+Train Epoch: 5 [42240/60000 (70%)]	Loss: 0.157825
+Train Epoch: 5 [42880/60000 (71%)]	Loss: 0.397800
+Train Epoch: 5 [43520/60000 (72%)]	Loss: 0.105635
+Train Epoch: 5 [44160/60000 (74%)]	Loss: 0.313885
+Train Epoch: 5 [44800/60000 (75%)]	Loss: 0.154057
+Train Epoch: 5 [45440/60000 (76%)]	Loss: 0.149108
+Train Epoch: 5 [46080/60000 (77%)]	Loss: 0.233011
+Train Epoch: 5 [46720/60000 (78%)]	Loss: 0.273040
+Train Epoch: 5 [47360/60000 (79%)]	Loss: 0.253705
+Train Epoch: 5 [48000/60000 (80%)]	Loss: 0.284199
+Train Epoch: 5 [48640/60000 (81%)]	Loss: 0.172538
+Train Epoch: 5 [49280/60000 (82%)]	Loss: 0.251041
+Train Epoch: 5 [49920/60000 (83%)]	Loss: 0.266437
+Train Epoch: 5 [50560/60000 (84%)]	Loss: 0.203386
+Train Epoch: 5 [51200/60000 (85%)]	Loss: 0.248574
+Train Epoch: 5 [51840/60000 (86%)]	Loss: 0.324646
+Train Epoch: 5 [52480/60000 (87%)]	Loss: 0.127692
+Train Epoch: 5 [53120/60000 (88%)]	Loss: 0.426977
+Train Epoch: 5 [53760/60000 (90%)]	Loss: 0.227005
+Train Epoch: 5 [54400/60000 (91%)]	Loss: 0.364192
+Train Epoch: 5 [55040/60000 (92%)]	Loss: 0.183523
+Train Epoch: 5 [55680/60000 (93%)]	Loss: 0.094870
+Train Epoch: 5 [56320/60000 (94%)]	Loss: 0.148032
+Train Epoch: 5 [56960/60000 (95%)]	Loss: 0.075481
+Train Epoch: 5 [57600/60000 (96%)]	Loss: 0.449027
+Train Epoch: 5 [58240/60000 (97%)]	Loss: 0.196415
+Train Epoch: 5 [58880/60000 (98%)]	Loss: 0.133008
+Train Epoch: 5 [59520/60000 (99%)]	Loss: 0.178989
+5.0122716426849365
+
+Test set: Average loss: 0.1264, Accuracy: 9606/10000 (96%)
+
+0.82991623878479
+Train Epoch: 6 [0/60000 (0%)]	Loss: 0.157900
+Train Epoch: 6 [640/60000 (1%)]	Loss: 0.261039
+Train Epoch: 6 [1280/60000 (2%)]	Loss: 0.226689
+Train Epoch: 6 [1920/60000 (3%)]	Loss: 0.259336
+Train Epoch: 6 [2560/60000 (4%)]	Loss: 0.191134
+Train Epoch: 6 [3200/60000 (5%)]	Loss: 0.048686
+Train Epoch: 6 [3840/60000 (6%)]	Loss: 0.358950
+Train Epoch: 6 [4480/60000 (7%)]	Loss: 0.164650
+Train Epoch: 6 [5120/60000 (9%)]	Loss: 0.329455
+Train Epoch: 6 [5760/60000 (10%)]	Loss: 0.225693
+Train Epoch: 6 [6400/60000 (11%)]	Loss: 0.189828
+Train Epoch: 6 [7040/60000 (12%)]	Loss: 0.131810
+Train Epoch: 6 [7680/60000 (13%)]	Loss: 0.239646
+Train Epoch: 6 [8320/60000 (14%)]	Loss: 0.166514
+Train Epoch: 6 [8960/60000 (15%)]	Loss: 0.215734
+Train Epoch: 6 [9600/60000 (16%)]	Loss: 0.079397
+Train Epoch: 6 [10240/60000 (17%)]	Loss: 0.084658
+Train Epoch: 6 [10880/60000 (18%)]	Loss: 0.174879
+Train Epoch: 6 [11520/60000 (19%)]	Loss: 0.239559
+Train Epoch: 6 [12160/60000 (20%)]	Loss: 0.158260
+Train Epoch: 6 [12800/60000 (21%)]	Loss: 0.279589
+Train Epoch: 6 [13440/60000 (22%)]	Loss: 0.140640
+Train Epoch: 6 [14080/60000 (23%)]	Loss: 0.409020
+Train Epoch: 6 [14720/60000 (25%)]	Loss: 0.291580
+Train Epoch: 6 [15360/60000 (26%)]	Loss: 0.423610
+Train Epoch: 6 [16000/60000 (27%)]	Loss: 0.099558
+Train Epoch: 6 [16640/60000 (28%)]	Loss: 0.527782
+Train Epoch: 6 [17280/60000 (29%)]	Loss: 0.152104
+Train Epoch: 6 [17920/60000 (30%)]	Loss: 0.278195
+Train Epoch: 6 [18560/60000 (31%)]	Loss: 0.132998
+Train Epoch: 6 [19200/60000 (32%)]	Loss: 0.143887
+Train Epoch: 6 [19840/60000 (33%)]	Loss: 0.288480
+Train Epoch: 6 [20480/60000 (34%)]	Loss: 0.132687
+Train Epoch: 6 [21120/60000 (35%)]	Loss: 0.201442
+Train Epoch: 6 [21760/60000 (36%)]	Loss: 0.176790
+Train Epoch: 6 [22400/60000 (37%)]	Loss: 0.159799
+Train Epoch: 6 [23040/60000 (38%)]	Loss: 0.281847
+Train Epoch: 6 [23680/60000 (39%)]	Loss: 0.099344
+Train Epoch: 6 [24320/60000 (41%)]	Loss: 0.163338
+Train Epoch: 6 [24960/60000 (42%)]	Loss: 0.090015
+Train Epoch: 6 [25600/60000 (43%)]	Loss: 0.142054
+Train Epoch: 6 [26240/60000 (44%)]	Loss: 0.486935
+Train Epoch: 6 [26880/60000 (45%)]	Loss: 0.283781
+Train Epoch: 6 [27520/60000 (46%)]	Loss: 0.286211
+Train Epoch: 6 [28160/60000 (47%)]	Loss: 0.194394
+Train Epoch: 6 [28800/60000 (48%)]	Loss: 0.142119
+Train Epoch: 6 [29440/60000 (49%)]	Loss: 0.274557
+Train Epoch: 6 [30080/60000 (50%)]	Loss: 0.128845
+Train Epoch: 6 [30720/60000 (51%)]	Loss: 0.143225
+Train Epoch: 6 [31360/60000 (52%)]	Loss: 0.212885
+Train Epoch: 6 [32000/60000 (53%)]	Loss: 0.107517
+Train Epoch: 6 [32640/60000 (54%)]	Loss: 0.165889
+Train Epoch: 6 [33280/60000 (55%)]	Loss: 0.104141
+Train Epoch: 6 [33920/60000 (57%)]	Loss: 0.147633
+Train Epoch: 6 [34560/60000 (58%)]	Loss: 0.120574
+Train Epoch: 6 [35200/60000 (59%)]	Loss: 0.228751
+Train Epoch: 6 [35840/60000 (60%)]	Loss: 0.156604
+Train Epoch: 6 [36480/60000 (61%)]	Loss: 0.200512
+Train Epoch: 6 [37120/60000 (62%)]	Loss: 0.145052
+Train Epoch: 6 [37760/60000 (63%)]	Loss: 0.293483
+Train Epoch: 6 [38400/60000 (64%)]	Loss: 0.232607
+Train Epoch: 6 [39040/60000 (65%)]	Loss: 0.151517
+Train Epoch: 6 [39680/60000 (66%)]	Loss: 0.156385
+Train Epoch: 6 [40320/60000 (67%)]	Loss: 0.287484
+Train Epoch: 6 [40960/60000 (68%)]	Loss: 0.164073
+Train Epoch: 6 [41600/60000 (69%)]	Loss: 0.208440
+Train Epoch: 6 [42240/60000 (70%)]	Loss: 0.179300
+Train Epoch: 6 [42880/60000 (71%)]	Loss: 0.333505
+Train Epoch: 6 [43520/60000 (72%)]	Loss: 0.367838
+Train Epoch: 6 [44160/60000 (74%)]	Loss: 0.217922
+Train Epoch: 6 [44800/60000 (75%)]	Loss: 0.225614
+Train Epoch: 6 [45440/60000 (76%)]	Loss: 0.166875
+Train Epoch: 6 [46080/60000 (77%)]	Loss: 0.070153
+Train Epoch: 6 [46720/60000 (78%)]	Loss: 0.258605
+Train Epoch: 6 [47360/60000 (79%)]	Loss: 0.196327
+Train Epoch: 6 [48000/60000 (80%)]	Loss: 0.211018
+Train Epoch: 6 [48640/60000 (81%)]	Loss: 0.281584
+Train Epoch: 6 [49280/60000 (82%)]	Loss: 0.203289
+Train Epoch: 6 [49920/60000 (83%)]	Loss: 0.231557
+Train Epoch: 6 [50560/60000 (84%)]	Loss: 0.176735
+Train Epoch: 6 [51200/60000 (85%)]	Loss: 0.204841
+Train Epoch: 6 [51840/60000 (86%)]	Loss: 0.130290
+Train Epoch: 6 [52480/60000 (87%)]	Loss: 0.206295
+Train Epoch: 6 [53120/60000 (88%)]	Loss: 0.147977
+Train Epoch: 6 [53760/60000 (90%)]	Loss: 0.182272
+Train Epoch: 6 [54400/60000 (91%)]	Loss: 0.072549
+Train Epoch: 6 [55040/60000 (92%)]	Loss: 0.172794
+Train Epoch: 6 [55680/60000 (93%)]	Loss: 0.174837
+Train Epoch: 6 [56320/60000 (94%)]	Loss: 0.238110
+Train Epoch: 6 [56960/60000 (95%)]	Loss: 0.117292
+Train Epoch: 6 [57600/60000 (96%)]	Loss: 0.174685
+Train Epoch: 6 [58240/60000 (97%)]	Loss: 0.179290
+Train Epoch: 6 [58880/60000 (98%)]	Loss: 0.451040
+Train Epoch: 6 [59520/60000 (99%)]	Loss: 0.357640
+5.115934133529663
+
+Test set: Average loss: 0.1218, Accuracy: 9636/10000 (96%)
+
+0.8394474983215332
+Train Epoch: 7 [0/60000 (0%)]	Loss: 0.406009
+Train Epoch: 7 [640/60000 (1%)]	Loss: 0.127516
+Train Epoch: 7 [1280/60000 (2%)]	Loss: 0.132581
+Train Epoch: 7 [1920/60000 (3%)]	Loss: 0.203656
+Train Epoch: 7 [2560/60000 (4%)]	Loss: 0.290576
+Train Epoch: 7 [3200/60000 (5%)]	Loss: 0.118650
+Train Epoch: 7 [3840/60000 (6%)]	Loss: 0.086739
+Train Epoch: 7 [4480/60000 (7%)]	Loss: 0.180994
+Train Epoch: 7 [5120/60000 (9%)]	Loss: 0.097098
+Train Epoch: 7 [5760/60000 (10%)]	Loss: 0.176977
+Train Epoch: 7 [6400/60000 (11%)]	Loss: 0.126469
+Train Epoch: 7 [7040/60000 (12%)]	Loss: 0.246757
+Train Epoch: 7 [7680/60000 (13%)]	Loss: 0.308421
+Train Epoch: 7 [8320/60000 (14%)]	Loss: 0.190963
+Train Epoch: 7 [8960/60000 (15%)]	Loss: 0.065279
+Train Epoch: 7 [9600/60000 (16%)]	Loss: 0.210888
+Train Epoch: 7 [10240/60000 (17%)]	Loss: 0.143225
+Train Epoch: 7 [10880/60000 (18%)]	Loss: 0.072721
+Train Epoch: 7 [11520/60000 (19%)]	Loss: 0.236471
+Train Epoch: 7 [12160/60000 (20%)]	Loss: 0.239432
+Train Epoch: 7 [12800/60000 (21%)]	Loss: 0.191551
+Train Epoch: 7 [13440/60000 (22%)]	Loss: 0.299329
+Train Epoch: 7 [14080/60000 (23%)]	Loss: 0.278907
+Train Epoch: 7 [14720/60000 (25%)]	Loss: 0.152122
+Train Epoch: 7 [15360/60000 (26%)]	Loss: 0.219122
+Train Epoch: 7 [16000/60000 (27%)]	Loss: 0.112197
+Train Epoch: 7 [16640/60000 (28%)]	Loss: 0.176340
+Train Epoch: 7 [17280/60000 (29%)]	Loss: 0.186654
+Train Epoch: 7 [17920/60000 (30%)]	Loss: 0.051228
+Train Epoch: 7 [18560/60000 (31%)]	Loss: 0.199643
+Train Epoch: 7 [19200/60000 (32%)]	Loss: 0.166498
+Train Epoch: 7 [19840/60000 (33%)]	Loss: 0.175478
+Train Epoch: 7 [20480/60000 (34%)]	Loss: 0.099131
+Train Epoch: 7 [21120/60000 (35%)]	Loss: 0.057226
+Train Epoch: 7 [21760/60000 (36%)]	Loss: 0.116617
+Train Epoch: 7 [22400/60000 (37%)]	Loss: 0.084077
+Train Epoch: 7 [23040/60000 (38%)]	Loss: 0.127874
+Train Epoch: 7 [23680/60000 (39%)]	Loss: 0.096379
+Train Epoch: 7 [24320/60000 (41%)]	Loss: 0.078254
+Train Epoch: 7 [24960/60000 (42%)]	Loss: 0.206018
+Train Epoch: 7 [25600/60000 (43%)]	Loss: 0.188399
+Train Epoch: 7 [26240/60000 (44%)]	Loss: 0.140323
+Train Epoch: 7 [26880/60000 (45%)]	Loss: 0.058071
+Train Epoch: 7 [27520/60000 (46%)]	Loss: 0.225451
+Train Epoch: 7 [28160/60000 (47%)]	Loss: 0.160455
+Train Epoch: 7 [28800/60000 (48%)]	Loss: 0.242882
+Train Epoch: 7 [29440/60000 (49%)]	Loss: 0.188710
+Train Epoch: 7 [30080/60000 (50%)]	Loss: 0.154615
+Train Epoch: 7 [30720/60000 (51%)]	Loss: 0.070796
+Train Epoch: 7 [31360/60000 (52%)]	Loss: 0.104982
+Train Epoch: 7 [32000/60000 (53%)]	Loss: 0.293318
+Train Epoch: 7 [32640/60000 (54%)]	Loss: 0.180081
+Train Epoch: 7 [33280/60000 (55%)]	Loss: 0.091249
+Train Epoch: 7 [33920/60000 (57%)]	Loss: 0.367537
+Train Epoch: 7 [34560/60000 (58%)]	Loss: 0.125172
+Train Epoch: 7 [35200/60000 (59%)]	Loss: 0.247331
+Train Epoch: 7 [35840/60000 (60%)]	Loss: 0.076803
+Train Epoch: 7 [36480/60000 (61%)]	Loss: 0.206890
+Train Epoch: 7 [37120/60000 (62%)]	Loss: 0.216906
+Train Epoch: 7 [37760/60000 (63%)]	Loss: 0.629371
+Train Epoch: 7 [38400/60000 (64%)]	Loss: 0.159023
+Train Epoch: 7 [39040/60000 (65%)]	Loss: 0.107199
+Train Epoch: 7 [39680/60000 (66%)]	Loss: 0.090032
+Train Epoch: 7 [40320/60000 (67%)]	Loss: 0.306720
+Train Epoch: 7 [40960/60000 (68%)]	Loss: 0.161268
+Train Epoch: 7 [41600/60000 (69%)]	Loss: 0.332791
+Train Epoch: 7 [42240/60000 (70%)]	Loss: 0.396951
+Train Epoch: 7 [42880/60000 (71%)]	Loss: 0.298822
+Train Epoch: 7 [43520/60000 (72%)]	Loss: 0.281486
+Train Epoch: 7 [44160/60000 (74%)]	Loss: 0.421084
+Train Epoch: 7 [44800/60000 (75%)]	Loss: 0.140153
+Train Epoch: 7 [45440/60000 (76%)]	Loss: 0.266168
+Train Epoch: 7 [46080/60000 (77%)]	Loss: 0.080820
+Train Epoch: 7 [46720/60000 (78%)]	Loss: 0.171793
+Train Epoch: 7 [47360/60000 (79%)]	Loss: 0.190240
+Train Epoch: 7 [48000/60000 (80%)]	Loss: 0.064406
+Train Epoch: 7 [48640/60000 (81%)]	Loss: 0.312974
+Train Epoch: 7 [49280/60000 (82%)]	Loss: 0.159575
+Train Epoch: 7 [49920/60000 (83%)]	Loss: 0.116913
+Train Epoch: 7 [50560/60000 (84%)]	Loss: 0.189608
+Train Epoch: 7 [51200/60000 (85%)]	Loss: 0.119657
+Train Epoch: 7 [51840/60000 (86%)]	Loss: 0.124046
+Train Epoch: 7 [52480/60000 (87%)]	Loss: 0.320956
+Train Epoch: 7 [53120/60000 (88%)]	Loss: 0.157127
+Train Epoch: 7 [53760/60000 (90%)]	Loss: 0.244633
+Train Epoch: 7 [54400/60000 (91%)]	Loss: 0.144812
+Train Epoch: 7 [55040/60000 (92%)]	Loss: 0.383512
+Train Epoch: 7 [55680/60000 (93%)]	Loss: 0.125802
+Train Epoch: 7 [56320/60000 (94%)]	Loss: 0.278835
+Train Epoch: 7 [56960/60000 (95%)]	Loss: 0.112665
+Train Epoch: 7 [57600/60000 (96%)]	Loss: 0.322797
+Train Epoch: 7 [58240/60000 (97%)]	Loss: 0.434341
+Train Epoch: 7 [58880/60000 (98%)]	Loss: 0.423577
+Train Epoch: 7 [59520/60000 (99%)]	Loss: 0.146291
+5.099720478057861
+
+Test set: Average loss: 0.1198, Accuracy: 9631/10000 (96%)
+
+0.8339383602142334
+Train Epoch: 8 [0/60000 (0%)]	Loss: 0.121481
+Train Epoch: 8 [640/60000 (1%)]	Loss: 0.156391
+Train Epoch: 8 [1280/60000 (2%)]	Loss: 0.111563
+Train Epoch: 8 [1920/60000 (3%)]	Loss: 0.197307
+Train Epoch: 8 [2560/60000 (4%)]	Loss: 0.168781
+Train Epoch: 8 [3200/60000 (5%)]	Loss: 0.133176
+Train Epoch: 8 [3840/60000 (6%)]	Loss: 0.120325
+Train Epoch: 8 [4480/60000 (7%)]	Loss: 0.119527
+Train Epoch: 8 [5120/60000 (9%)]	Loss: 0.234523
+Train Epoch: 8 [5760/60000 (10%)]	Loss: 0.168483
+Train Epoch: 8 [6400/60000 (11%)]	Loss: 0.054792
+Train Epoch: 8 [7040/60000 (12%)]	Loss: 0.303895
+Train Epoch: 8 [7680/60000 (13%)]	Loss: 0.319032
+Train Epoch: 8 [8320/60000 (14%)]	Loss: 0.225859
+Train Epoch: 8 [8960/60000 (15%)]	Loss: 0.181614
+Train Epoch: 8 [9600/60000 (16%)]	Loss: 0.113780
+Train Epoch: 8 [10240/60000 (17%)]	Loss: 0.236203
+Train Epoch: 8 [10880/60000 (18%)]	Loss: 0.152949
+Train Epoch: 8 [11520/60000 (19%)]	Loss: 0.172119
+Train Epoch: 8 [12160/60000 (20%)]	Loss: 0.033578
+Train Epoch: 8 [12800/60000 (21%)]	Loss: 0.162869
+Train Epoch: 8 [13440/60000 (22%)]	Loss: 0.085079
+Train Epoch: 8 [14080/60000 (23%)]	Loss: 0.156270
+Train Epoch: 8 [14720/60000 (25%)]	Loss: 0.231418
+Train Epoch: 8 [15360/60000 (26%)]	Loss: 0.135776
+Train Epoch: 8 [16000/60000 (27%)]	Loss: 0.233115
+Train Epoch: 8 [16640/60000 (28%)]	Loss: 0.328198
+Train Epoch: 8 [17280/60000 (29%)]	Loss: 0.257151
+Train Epoch: 8 [17920/60000 (30%)]	Loss: 0.217808
+Train Epoch: 8 [18560/60000 (31%)]	Loss: 0.306540
+Train Epoch: 8 [19200/60000 (32%)]	Loss: 0.154850
+Train Epoch: 8 [19840/60000 (33%)]	Loss: 0.090996
+Train Epoch: 8 [20480/60000 (34%)]	Loss: 0.202640
+Train Epoch: 8 [21120/60000 (35%)]	Loss: 0.169030
+Train Epoch: 8 [21760/60000 (36%)]	Loss: 0.210457
+Train Epoch: 8 [22400/60000 (37%)]	Loss: 0.172506
+Train Epoch: 8 [23040/60000 (38%)]	Loss: 0.182370
+Train Epoch: 8 [23680/60000 (39%)]	Loss: 0.243499
+Train Epoch: 8 [24320/60000 (41%)]	Loss: 0.169913
+Train Epoch: 8 [24960/60000 (42%)]	Loss: 0.228371
+Train Epoch: 8 [25600/60000 (43%)]	Loss: 0.234567
+Train Epoch: 8 [26240/60000 (44%)]	Loss: 0.275940
+Train Epoch: 8 [26880/60000 (45%)]	Loss: 0.181484
+Train Epoch: 8 [27520/60000 (46%)]	Loss: 0.253657
+Train Epoch: 8 [28160/60000 (47%)]	Loss: 0.193167
+Train Epoch: 8 [28800/60000 (48%)]	Loss: 0.129257
+Train Epoch: 8 [29440/60000 (49%)]	Loss: 0.143362
+Train Epoch: 8 [30080/60000 (50%)]	Loss: 0.065336
+Train Epoch: 8 [30720/60000 (51%)]	Loss: 0.128027
+Train Epoch: 8 [31360/60000 (52%)]	Loss: 0.151697
+Train Epoch: 8 [32000/60000 (53%)]	Loss: 0.186779
+Train Epoch: 8 [32640/60000 (54%)]	Loss: 0.250293
+Train Epoch: 8 [33280/60000 (55%)]	Loss: 0.219718
+Train Epoch: 8 [33920/60000 (57%)]	Loss: 0.113023
+Train Epoch: 8 [34560/60000 (58%)]	Loss: 0.139213
+Train Epoch: 8 [35200/60000 (59%)]	Loss: 0.135007
+Train Epoch: 8 [35840/60000 (60%)]	Loss: 0.173632
+Train Epoch: 8 [36480/60000 (61%)]	Loss: 0.113401
+Train Epoch: 8 [37120/60000 (62%)]	Loss: 0.175152
+Train Epoch: 8 [37760/60000 (63%)]	Loss: 0.212072
+Train Epoch: 8 [38400/60000 (64%)]	Loss: 0.143656
+Train Epoch: 8 [39040/60000 (65%)]	Loss: 0.146736
+Train Epoch: 8 [39680/60000 (66%)]	Loss: 0.184562
+Train Epoch: 8 [40320/60000 (67%)]	Loss: 0.159721
+Train Epoch: 8 [40960/60000 (68%)]	Loss: 0.296164
+Train Epoch: 8 [41600/60000 (69%)]	Loss: 0.093713
+Train Epoch: 8 [42240/60000 (70%)]	Loss: 0.156808
+Train Epoch: 8 [42880/60000 (71%)]	Loss: 0.294693
+Train Epoch: 8 [43520/60000 (72%)]	Loss: 0.350849
+Train Epoch: 8 [44160/60000 (74%)]	Loss: 0.199390
+Train Epoch: 8 [44800/60000 (75%)]	Loss: 0.264448
+Train Epoch: 8 [45440/60000 (76%)]	Loss: 0.251607
+Train Epoch: 8 [46080/60000 (77%)]	Loss: 0.319944
+Train Epoch: 8 [46720/60000 (78%)]	Loss: 0.358657
+Train Epoch: 8 [47360/60000 (79%)]	Loss: 0.118074
+Train Epoch: 8 [48000/60000 (80%)]	Loss: 0.110229
+Train Epoch: 8 [48640/60000 (81%)]	Loss: 0.212816
+Train Epoch: 8 [49280/60000 (82%)]	Loss: 0.147395
+Train Epoch: 8 [49920/60000 (83%)]	Loss: 0.159062
+Train Epoch: 8 [50560/60000 (84%)]	Loss: 0.258439
+Train Epoch: 8 [51200/60000 (85%)]	Loss: 0.349700
+Train Epoch: 8 [51840/60000 (86%)]	Loss: 0.258859
+Train Epoch: 8 [52480/60000 (87%)]	Loss: 0.254939
+Train Epoch: 8 [53120/60000 (88%)]	Loss: 0.289334
+Train Epoch: 8 [53760/60000 (90%)]	Loss: 0.318008
+Train Epoch: 8 [54400/60000 (91%)]	Loss: 0.308993
+Train Epoch: 8 [55040/60000 (92%)]	Loss: 0.237464
+Train Epoch: 8 [55680/60000 (93%)]	Loss: 0.104645
+Train Epoch: 8 [56320/60000 (94%)]	Loss: 0.186694
+Train Epoch: 8 [56960/60000 (95%)]	Loss: 0.132140
+Train Epoch: 8 [57600/60000 (96%)]	Loss: 0.253565
+Train Epoch: 8 [58240/60000 (97%)]	Loss: 0.226925
+Train Epoch: 8 [58880/60000 (98%)]	Loss: 0.090918
+Train Epoch: 8 [59520/60000 (99%)]	Loss: 0.196829
+5.067313194274902
+
+Test set: Average loss: 0.1191, Accuracy: 9643/10000 (96%)
+
+0.8243191242218018
+Train Epoch: 9 [0/60000 (0%)]	Loss: 0.302868
+Train Epoch: 9 [640/60000 (1%)]	Loss: 0.289947
+Train Epoch: 9 [1280/60000 (2%)]	Loss: 0.169786
+Train Epoch: 9 [1920/60000 (3%)]	Loss: 0.149997
+Train Epoch: 9 [2560/60000 (4%)]	Loss: 0.178701
+Train Epoch: 9 [3200/60000 (5%)]	Loss: 0.095955
+Train Epoch: 9 [3840/60000 (6%)]	Loss: 0.153771
+Train Epoch: 9 [4480/60000 (7%)]	Loss: 0.182914
+Train Epoch: 9 [5120/60000 (9%)]	Loss: 0.164720
+Train Epoch: 9 [5760/60000 (10%)]	Loss: 0.263557
+Train Epoch: 9 [6400/60000 (11%)]	Loss: 0.191057
+Train Epoch: 9 [7040/60000 (12%)]	Loss: 0.201257
+Train Epoch: 9 [7680/60000 (13%)]	Loss: 0.199087
+Train Epoch: 9 [8320/60000 (14%)]	Loss: 0.232927
+Train Epoch: 9 [8960/60000 (15%)]	Loss: 0.084278
+Train Epoch: 9 [9600/60000 (16%)]	Loss: 0.199673
+Train Epoch: 9 [10240/60000 (17%)]	Loss: 0.120247
+Train Epoch: 9 [10880/60000 (18%)]	Loss: 0.173421
+Train Epoch: 9 [11520/60000 (19%)]	Loss: 0.171225
+Train Epoch: 9 [12160/60000 (20%)]	Loss: 0.110691
+Train Epoch: 9 [12800/60000 (21%)]	Loss: 0.243600
+Train Epoch: 9 [13440/60000 (22%)]	Loss: 0.130018
+Train Epoch: 9 [14080/60000 (23%)]	Loss: 0.313802
+Train Epoch: 9 [14720/60000 (25%)]	Loss: 0.141738
+Train Epoch: 9 [15360/60000 (26%)]	Loss: 0.207976
+Train Epoch: 9 [16000/60000 (27%)]	Loss: 0.106384
+Train Epoch: 9 [16640/60000 (28%)]	Loss: 0.282952
+Train Epoch: 9 [17280/60000 (29%)]	Loss: 0.260903
+Train Epoch: 9 [17920/60000 (30%)]	Loss: 0.179567
+Train Epoch: 9 [18560/60000 (31%)]	Loss: 0.092682
+Train Epoch: 9 [19200/60000 (32%)]	Loss: 0.749164
+Train Epoch: 9 [19840/60000 (33%)]	Loss: 0.251853
+Train Epoch: 9 [20480/60000 (34%)]	Loss: 0.135375
+Train Epoch: 9 [21120/60000 (35%)]	Loss: 0.155212
+Train Epoch: 9 [21760/60000 (36%)]	Loss: 0.052471
+Train Epoch: 9 [22400/60000 (37%)]	Loss: 0.552267
+Train Epoch: 9 [23040/60000 (38%)]	Loss: 0.162196
+Train Epoch: 9 [23680/60000 (39%)]	Loss: 0.087956
+Train Epoch: 9 [24320/60000 (41%)]	Loss: 0.126123
+Train Epoch: 9 [24960/60000 (42%)]	Loss: 0.180989
+Train Epoch: 9 [25600/60000 (43%)]	Loss: 0.223295
+Train Epoch: 9 [26240/60000 (44%)]	Loss: 0.049422
+Train Epoch: 9 [26880/60000 (45%)]	Loss: 0.072460
+Train Epoch: 9 [27520/60000 (46%)]	Loss: 0.255321
+Train Epoch: 9 [28160/60000 (47%)]	Loss: 0.055773
+Train Epoch: 9 [28800/60000 (48%)]	Loss: 0.049147
+Train Epoch: 9 [29440/60000 (49%)]	Loss: 0.415183
+Train Epoch: 9 [30080/60000 (50%)]	Loss: 0.126505
+Train Epoch: 9 [30720/60000 (51%)]	Loss: 0.131969
+Train Epoch: 9 [31360/60000 (52%)]	Loss: 0.164808
+Train Epoch: 9 [32000/60000 (53%)]	Loss: 0.145937
+Train Epoch: 9 [32640/60000 (54%)]	Loss: 0.256853
+Train Epoch: 9 [33280/60000 (55%)]	Loss: 0.355354
+Train Epoch: 9 [33920/60000 (57%)]	Loss: 0.203998
+Train Epoch: 9 [34560/60000 (58%)]	Loss: 0.210568
+Train Epoch: 9 [35200/60000 (59%)]	Loss: 0.371433
+Train Epoch: 9 [35840/60000 (60%)]	Loss: 0.125844
+Train Epoch: 9 [36480/60000 (61%)]	Loss: 0.310044
+Train Epoch: 9 [37120/60000 (62%)]	Loss: 0.194973
+Train Epoch: 9 [37760/60000 (63%)]	Loss: 0.235373
+Train Epoch: 9 [38400/60000 (64%)]	Loss: 0.187053
+Train Epoch: 9 [39040/60000 (65%)]	Loss: 0.111267
+Train Epoch: 9 [39680/60000 (66%)]	Loss: 0.232806
+Train Epoch: 9 [40320/60000 (67%)]	Loss: 0.182653
+Train Epoch: 9 [40960/60000 (68%)]	Loss: 0.380046
+Train Epoch: 9 [41600/60000 (69%)]	Loss: 0.134274
+Train Epoch: 9 [42240/60000 (70%)]	Loss: 0.108944
+Train Epoch: 9 [42880/60000 (71%)]	Loss: 0.318042
+Train Epoch: 9 [43520/60000 (72%)]	Loss: 0.206936
+Train Epoch: 9 [44160/60000 (74%)]	Loss: 0.177588
+Train Epoch: 9 [44800/60000 (75%)]	Loss: 0.118529
+Train Epoch: 9 [45440/60000 (76%)]	Loss: 0.236368
+Train Epoch: 9 [46080/60000 (77%)]	Loss: 0.438815
+Train Epoch: 9 [46720/60000 (78%)]	Loss: 0.253788
+Train Epoch: 9 [47360/60000 (79%)]	Loss: 0.175212
+Train Epoch: 9 [48000/60000 (80%)]	Loss: 0.178347
+Train Epoch: 9 [48640/60000 (81%)]	Loss: 0.228884
+Train Epoch: 9 [49280/60000 (82%)]	Loss: 0.183774
+Train Epoch: 9 [49920/60000 (83%)]	Loss: 0.124104
+Train Epoch: 9 [50560/60000 (84%)]	Loss: 0.206508
+Train Epoch: 9 [51200/60000 (85%)]	Loss: 0.254638
+Train Epoch: 9 [51840/60000 (86%)]	Loss: 0.168141
+Train Epoch: 9 [52480/60000 (87%)]	Loss: 0.194874
+Train Epoch: 9 [53120/60000 (88%)]	Loss: 0.302027
+Train Epoch: 9 [53760/60000 (90%)]	Loss: 0.168840
+Train Epoch: 9 [54400/60000 (91%)]	Loss: 0.169262
+Train Epoch: 9 [55040/60000 (92%)]	Loss: 0.155145
+Train Epoch: 9 [55680/60000 (93%)]	Loss: 0.287474
+Train Epoch: 9 [56320/60000 (94%)]	Loss: 0.372780
+Train Epoch: 9 [56960/60000 (95%)]	Loss: 0.303626
+Train Epoch: 9 [57600/60000 (96%)]	Loss: 0.225475
+Train Epoch: 9 [58240/60000 (97%)]	Loss: 0.153965
+Train Epoch: 9 [58880/60000 (98%)]	Loss: 0.255775
+Train Epoch: 9 [59520/60000 (99%)]	Loss: 0.242497
+5.1854400634765625
+
+Test set: Average loss: 0.1181, Accuracy: 9638/10000 (96%)
+
+0.8269476890563965
+Train Epoch: 10 [0/60000 (0%)]	Loss: 0.075910
+Train Epoch: 10 [640/60000 (1%)]	Loss: 0.372691
+Train Epoch: 10 [1280/60000 (2%)]	Loss: 0.413765
+Train Epoch: 10 [1920/60000 (3%)]	Loss: 0.244433
+Train Epoch: 10 [2560/60000 (4%)]	Loss: 0.137494
+Train Epoch: 10 [3200/60000 (5%)]	Loss: 0.131361
+Train Epoch: 10 [3840/60000 (6%)]	Loss: 0.120173
+Train Epoch: 10 [4480/60000 (7%)]	Loss: 0.222695
+Train Epoch: 10 [5120/60000 (9%)]	Loss: 0.245458
+Train Epoch: 10 [5760/60000 (10%)]	Loss: 0.234279
+Train Epoch: 10 [6400/60000 (11%)]	Loss: 0.142197
+Train Epoch: 10 [7040/60000 (12%)]	Loss: 0.137907
+Train Epoch: 10 [7680/60000 (13%)]	Loss: 0.033077
+Train Epoch: 10 [8320/60000 (14%)]	Loss: 0.163589
+Train Epoch: 10 [8960/60000 (15%)]	Loss: 0.170652
+Train Epoch: 10 [9600/60000 (16%)]	Loss: 0.192122
+Train Epoch: 10 [10240/60000 (17%)]	Loss: 0.108808
+Train Epoch: 10 [10880/60000 (18%)]	Loss: 0.208760
+Train Epoch: 10 [11520/60000 (19%)]	Loss: 0.114867
+Train Epoch: 10 [12160/60000 (20%)]	Loss: 0.188296
+Train Epoch: 10 [12800/60000 (21%)]	Loss: 0.203965
+Train Epoch: 10 [13440/60000 (22%)]	Loss: 0.290139
+Train Epoch: 10 [14080/60000 (23%)]	Loss: 0.123450
+Train Epoch: 10 [14720/60000 (25%)]	Loss: 0.134640
+Train Epoch: 10 [15360/60000 (26%)]	Loss: 0.126855
+Train Epoch: 10 [16000/60000 (27%)]	Loss: 0.108508
+Train Epoch: 10 [16640/60000 (28%)]	Loss: 0.168831
+Train Epoch: 10 [17280/60000 (29%)]	Loss: 0.219685
+Train Epoch: 10 [17920/60000 (30%)]	Loss: 0.142767
+Train Epoch: 10 [18560/60000 (31%)]	Loss: 0.262565
+Train Epoch: 10 [19200/60000 (32%)]	Loss: 0.084059
+Train Epoch: 10 [19840/60000 (33%)]	Loss: 0.148325
+Train Epoch: 10 [20480/60000 (34%)]	Loss: 0.242165
+Train Epoch: 10 [21120/60000 (35%)]	Loss: 0.204369
+Train Epoch: 10 [21760/60000 (36%)]	Loss: 0.159411
+Train Epoch: 10 [22400/60000 (37%)]	Loss: 0.207008
+Train Epoch: 10 [23040/60000 (38%)]	Loss: 0.092424
+Train Epoch: 10 [23680/60000 (39%)]	Loss: 0.182212
+Train Epoch: 10 [24320/60000 (41%)]	Loss: 0.301630
+Train Epoch: 10 [24960/60000 (42%)]	Loss: 0.055092
+Train Epoch: 10 [25600/60000 (43%)]	Loss: 0.228765
+Train Epoch: 10 [26240/60000 (44%)]	Loss: 0.127055
+Train Epoch: 10 [26880/60000 (45%)]	Loss: 0.174512
+Train Epoch: 10 [27520/60000 (46%)]	Loss: 0.147915
+Train Epoch: 10 [28160/60000 (47%)]	Loss: 0.111659
+Train Epoch: 10 [28800/60000 (48%)]	Loss: 0.126293
+Train Epoch: 10 [29440/60000 (49%)]	Loss: 0.218876
+Train Epoch: 10 [30080/60000 (50%)]	Loss: 0.176863
+Train Epoch: 10 [30720/60000 (51%)]	Loss: 0.099222
+Train Epoch: 10 [31360/60000 (52%)]	Loss: 0.273091
+Train Epoch: 10 [32000/60000 (53%)]	Loss: 0.204545
+Train Epoch: 10 [32640/60000 (54%)]	Loss: 0.133261
+Train Epoch: 10 [33280/60000 (55%)]	Loss: 0.234673
+Train Epoch: 10 [33920/60000 (57%)]	Loss: 0.222619
+Train Epoch: 10 [34560/60000 (58%)]	Loss: 0.421006
+Train Epoch: 10 [35200/60000 (59%)]	Loss: 0.219569
+Train Epoch: 10 [35840/60000 (60%)]	Loss: 0.220181
+Train Epoch: 10 [36480/60000 (61%)]	Loss: 0.120796
+Train Epoch: 10 [37120/60000 (62%)]	Loss: 0.292352
+Train Epoch: 10 [37760/60000 (63%)]	Loss: 0.309620
+Train Epoch: 10 [38400/60000 (64%)]	Loss: 0.273479
+Train Epoch: 10 [39040/60000 (65%)]	Loss: 0.145166
+Train Epoch: 10 [39680/60000 (66%)]	Loss: 0.090770
+Train Epoch: 10 [40320/60000 (67%)]	Loss: 0.159772
+Train Epoch: 10 [40960/60000 (68%)]	Loss: 0.276632
+Train Epoch: 10 [41600/60000 (69%)]	Loss: 0.224667
+Train Epoch: 10 [42240/60000 (70%)]	Loss: 0.065123
+Train Epoch: 10 [42880/60000 (71%)]	Loss: 0.253635
+Train Epoch: 10 [43520/60000 (72%)]	Loss: 0.183658
+Train Epoch: 10 [44160/60000 (74%)]	Loss: 0.067079
+Train Epoch: 10 [44800/60000 (75%)]	Loss: 0.109856
+Train Epoch: 10 [45440/60000 (76%)]	Loss: 0.091381
+Train Epoch: 10 [46080/60000 (77%)]	Loss: 0.176569
+Train Epoch: 10 [46720/60000 (78%)]	Loss: 0.159819
+Train Epoch: 10 [47360/60000 (79%)]	Loss: 0.113046
+Train Epoch: 10 [48000/60000 (80%)]	Loss: 0.082337
+Train Epoch: 10 [48640/60000 (81%)]	Loss: 0.115608
+Train Epoch: 10 [49280/60000 (82%)]	Loss: 0.129731
+Train Epoch: 10 [49920/60000 (83%)]	Loss: 0.147782
+Train Epoch: 10 [50560/60000 (84%)]	Loss: 0.247163
+Train Epoch: 10 [51200/60000 (85%)]	Loss: 0.176550
+Train Epoch: 10 [51840/60000 (86%)]	Loss: 0.168376
+Train Epoch: 10 [52480/60000 (87%)]	Loss: 0.114433
+Train Epoch: 10 [53120/60000 (88%)]	Loss: 0.193770
+Train Epoch: 10 [53760/60000 (90%)]	Loss: 0.118618
+Train Epoch: 10 [54400/60000 (91%)]	Loss: 0.124417
+Train Epoch: 10 [55040/60000 (92%)]	Loss: 0.046830
+Train Epoch: 10 [55680/60000 (93%)]	Loss: 0.246366
+Train Epoch: 10 [56320/60000 (94%)]	Loss: 0.096831
+Train Epoch: 10 [56960/60000 (95%)]	Loss: 0.258594
+Train Epoch: 10 [57600/60000 (96%)]	Loss: 0.102488
+Train Epoch: 10 [58240/60000 (97%)]	Loss: 0.401730
+Train Epoch: 10 [58880/60000 (98%)]	Loss: 0.075073
+Train Epoch: 10 [59520/60000 (99%)]	Loss: 0.090000
+5.162233591079712
+
+Test set: Average loss: 0.1174, Accuracy: 9639/10000 (96%)
+
+0.8436150550842285
+Train Epoch: 11 [0/60000 (0%)]	Loss: 0.138136
+Train Epoch: 11 [640/60000 (1%)]	Loss: 0.092523
+Train Epoch: 11 [1280/60000 (2%)]	Loss: 0.096928
+Train Epoch: 11 [1920/60000 (3%)]	Loss: 0.115195
+Train Epoch: 11 [2560/60000 (4%)]	Loss: 0.291543
+Train Epoch: 11 [3200/60000 (5%)]	Loss: 0.154227
+Train Epoch: 11 [3840/60000 (6%)]	Loss: 0.205313
+Train Epoch: 11 [4480/60000 (7%)]	Loss: 0.106403
+Train Epoch: 11 [5120/60000 (9%)]	Loss: 0.298656
+Train Epoch: 11 [5760/60000 (10%)]	Loss: 0.060986
+Train Epoch: 11 [6400/60000 (11%)]	Loss: 0.114884
+Train Epoch: 11 [7040/60000 (12%)]	Loss: 0.107734
+Train Epoch: 11 [7680/60000 (13%)]	Loss: 0.374797
+Train Epoch: 11 [8320/60000 (14%)]	Loss: 0.097423
+Train Epoch: 11 [8960/60000 (15%)]	Loss: 0.438186
+Train Epoch: 11 [9600/60000 (16%)]	Loss: 0.083260
+Train Epoch: 11 [10240/60000 (17%)]	Loss: 0.201251
+Train Epoch: 11 [10880/60000 (18%)]	Loss: 0.364606
+Train Epoch: 11 [11520/60000 (19%)]	Loss: 0.273434
+Train Epoch: 11 [12160/60000 (20%)]	Loss: 0.130709
+Train Epoch: 11 [12800/60000 (21%)]	Loss: 0.112811
+Train Epoch: 11 [13440/60000 (22%)]	Loss: 0.219003
+Train Epoch: 11 [14080/60000 (23%)]	Loss: 0.166916
+Train Epoch: 11 [14720/60000 (25%)]	Loss: 0.117677
+Train Epoch: 11 [15360/60000 (26%)]	Loss: 0.121042
+Train Epoch: 11 [16000/60000 (27%)]	Loss: 0.155303
+Train Epoch: 11 [16640/60000 (28%)]	Loss: 0.602870
+Train Epoch: 11 [17280/60000 (29%)]	Loss: 0.109276
+Train Epoch: 11 [17920/60000 (30%)]	Loss: 0.127474
+Train Epoch: 11 [18560/60000 (31%)]	Loss: 0.158059
+Train Epoch: 11 [19200/60000 (32%)]	Loss: 0.207200
+Train Epoch: 11 [19840/60000 (33%)]	Loss: 0.171559
+Train Epoch: 11 [20480/60000 (34%)]	Loss: 0.149802
+Train Epoch: 11 [21120/60000 (35%)]	Loss: 0.153415
+Train Epoch: 11 [21760/60000 (36%)]	Loss: 0.146494
+Train Epoch: 11 [22400/60000 (37%)]	Loss: 0.045076
+Train Epoch: 11 [23040/60000 (38%)]	Loss: 0.127894
+Train Epoch: 11 [23680/60000 (39%)]	Loss: 0.120851
+Train Epoch: 11 [24320/60000 (41%)]	Loss: 0.249589
+Train Epoch: 11 [24960/60000 (42%)]	Loss: 0.254532
+Train Epoch: 11 [25600/60000 (43%)]	Loss: 0.262992
+Train Epoch: 11 [26240/60000 (44%)]	Loss: 0.161508
+Train Epoch: 11 [26880/60000 (45%)]	Loss: 0.275309
+Train Epoch: 11 [27520/60000 (46%)]	Loss: 0.067061
+Train Epoch: 11 [28160/60000 (47%)]	Loss: 0.109094
+Train Epoch: 11 [28800/60000 (48%)]	Loss: 0.290194
+Train Epoch: 11 [29440/60000 (49%)]	Loss: 0.178944
+Train Epoch: 11 [30080/60000 (50%)]	Loss: 0.223002
+Train Epoch: 11 [30720/60000 (51%)]	Loss: 0.143306
+Train Epoch: 11 [31360/60000 (52%)]	Loss: 0.096120
+Train Epoch: 11 [32000/60000 (53%)]	Loss: 0.096322
+Train Epoch: 11 [32640/60000 (54%)]	Loss: 0.198415
+Train Epoch: 11 [33280/60000 (55%)]	Loss: 0.150723
+Train Epoch: 11 [33920/60000 (57%)]	Loss: 0.211682
+Train Epoch: 11 [34560/60000 (58%)]	Loss: 0.418744
+Train Epoch: 11 [35200/60000 (59%)]	Loss: 0.224758
+Train Epoch: 11 [35840/60000 (60%)]	Loss: 0.448737
+Train Epoch: 11 [36480/60000 (61%)]	Loss: 0.218612
+Train Epoch: 11 [37120/60000 (62%)]	Loss: 0.226507
+Train Epoch: 11 [37760/60000 (63%)]	Loss: 0.103076
+Train Epoch: 11 [38400/60000 (64%)]	Loss: 0.141172
+Train Epoch: 11 [39040/60000 (65%)]	Loss: 0.106446
+Train Epoch: 11 [39680/60000 (66%)]	Loss: 0.265667
+Train Epoch: 11 [40320/60000 (67%)]	Loss: 0.192338
+Train Epoch: 11 [40960/60000 (68%)]	Loss: 0.168291
+Train Epoch: 11 [41600/60000 (69%)]	Loss: 0.275847
+Train Epoch: 11 [42240/60000 (70%)]	Loss: 0.103164
+Train Epoch: 11 [42880/60000 (71%)]	Loss: 0.185303
+Train Epoch: 11 [43520/60000 (72%)]	Loss: 0.272666
+Train Epoch: 11 [44160/60000 (74%)]	Loss: 0.069115
+Train Epoch: 11 [44800/60000 (75%)]	Loss: 0.167885
+Train Epoch: 11 [45440/60000 (76%)]	Loss: 0.130929
+Train Epoch: 11 [46080/60000 (77%)]	Loss: 0.123216
+Train Epoch: 11 [46720/60000 (78%)]	Loss: 0.186516
+Train Epoch: 11 [47360/60000 (79%)]	Loss: 0.332157
+Train Epoch: 11 [48000/60000 (80%)]	Loss: 0.186228
+Train Epoch: 11 [48640/60000 (81%)]	Loss: 0.209861
+Train Epoch: 11 [49280/60000 (82%)]	Loss: 0.099072
+Train Epoch: 11 [49920/60000 (83%)]	Loss: 0.123192
+Train Epoch: 11 [50560/60000 (84%)]	Loss: 0.349996
+Train Epoch: 11 [51200/60000 (85%)]	Loss: 0.409572
+Train Epoch: 11 [51840/60000 (86%)]	Loss: 0.206502
+Train Epoch: 11 [52480/60000 (87%)]	Loss: 0.106856
+Train Epoch: 11 [53120/60000 (88%)]	Loss: 0.105506
+Train Epoch: 11 [53760/60000 (90%)]	Loss: 0.186382
+Train Epoch: 11 [54400/60000 (91%)]	Loss: 0.243903
+Train Epoch: 11 [55040/60000 (92%)]	Loss: 0.191284
+Train Epoch: 11 [55680/60000 (93%)]	Loss: 0.116776
+Train Epoch: 11 [56320/60000 (94%)]	Loss: 0.327357
+Train Epoch: 11 [56960/60000 (95%)]	Loss: 0.369983
+Train Epoch: 11 [57600/60000 (96%)]	Loss: 0.210347
+Train Epoch: 11 [58240/60000 (97%)]	Loss: 0.098192
+Train Epoch: 11 [58880/60000 (98%)]	Loss: 0.195187
+Train Epoch: 11 [59520/60000 (99%)]	Loss: 0.232537
+5.281743288040161
+
+Test set: Average loss: 0.1157, Accuracy: 9645/10000 (96%)
+
+0.8309268951416016
+Train Epoch: 12 [0/60000 (0%)]	Loss: 0.268599
+Train Epoch: 12 [640/60000 (1%)]	Loss: 0.111927
+Train Epoch: 12 [1280/60000 (2%)]	Loss: 0.085087
+Train Epoch: 12 [1920/60000 (3%)]	Loss: 0.252991
+Train Epoch: 12 [2560/60000 (4%)]	Loss: 0.207845
+Train Epoch: 12 [3200/60000 (5%)]	Loss: 0.344903
+Train Epoch: 12 [3840/60000 (6%)]	Loss: 0.208975
+Train Epoch: 12 [4480/60000 (7%)]	Loss: 0.062197
+Train Epoch: 12 [5120/60000 (9%)]	Loss: 0.259697
+Train Epoch: 12 [5760/60000 (10%)]	Loss: 0.117562
+Train Epoch: 12 [6400/60000 (11%)]	Loss: 0.106700
+Train Epoch: 12 [7040/60000 (12%)]	Loss: 0.212001
+Train Epoch: 12 [7680/60000 (13%)]	Loss: 0.140226
+Train Epoch: 12 [8320/60000 (14%)]	Loss: 0.104809
+Train Epoch: 12 [8960/60000 (15%)]	Loss: 0.340261
+Train Epoch: 12 [9600/60000 (16%)]	Loss: 0.084711
+Train Epoch: 12 [10240/60000 (17%)]	Loss: 0.343121
+Train Epoch: 12 [10880/60000 (18%)]	Loss: 0.291669
+Train Epoch: 12 [11520/60000 (19%)]	Loss: 0.254357
+Train Epoch: 12 [12160/60000 (20%)]	Loss: 0.121581
+Train Epoch: 12 [12800/60000 (21%)]	Loss: 0.118799
+Train Epoch: 12 [13440/60000 (22%)]	Loss: 0.243026
+Train Epoch: 12 [14080/60000 (23%)]	Loss: 0.085056
+Train Epoch: 12 [14720/60000 (25%)]	Loss: 0.097038
+Train Epoch: 12 [15360/60000 (26%)]	Loss: 0.106254
+Train Epoch: 12 [16000/60000 (27%)]	Loss: 0.119094
+Train Epoch: 12 [16640/60000 (28%)]	Loss: 0.048517
+Train Epoch: 12 [17280/60000 (29%)]	Loss: 0.169076
+Train Epoch: 12 [17920/60000 (30%)]	Loss: 0.483614
+Train Epoch: 12 [18560/60000 (31%)]	Loss: 0.250333
+Train Epoch: 12 [19200/60000 (32%)]	Loss: 0.115374
+Train Epoch: 12 [19840/60000 (33%)]	Loss: 0.232201
+Train Epoch: 12 [20480/60000 (34%)]	Loss: 0.150085
+Train Epoch: 12 [21120/60000 (35%)]	Loss: 0.078617
+Train Epoch: 12 [21760/60000 (36%)]	Loss: 0.255467
+Train Epoch: 12 [22400/60000 (37%)]	Loss: 0.113343
+Train Epoch: 12 [23040/60000 (38%)]	Loss: 0.241309
+Train Epoch: 12 [23680/60000 (39%)]	Loss: 0.258221
+Train Epoch: 12 [24320/60000 (41%)]	Loss: 0.334532
+Train Epoch: 12 [24960/60000 (42%)]	Loss: 0.126789
+Train Epoch: 12 [25600/60000 (43%)]	Loss: 0.098345
+Train Epoch: 12 [26240/60000 (44%)]	Loss: 0.182318
+Train Epoch: 12 [26880/60000 (45%)]	Loss: 0.295352
+Train Epoch: 12 [27520/60000 (46%)]	Loss: 0.082049
+Train Epoch: 12 [28160/60000 (47%)]	Loss: 0.333462
+Train Epoch: 12 [28800/60000 (48%)]	Loss: 0.431282
+Train Epoch: 12 [29440/60000 (49%)]	Loss: 0.240982
+Train Epoch: 12 [30080/60000 (50%)]	Loss: 0.183110
+Train Epoch: 12 [30720/60000 (51%)]	Loss: 0.393427
+Train Epoch: 12 [31360/60000 (52%)]	Loss: 0.432047
+Train Epoch: 12 [32000/60000 (53%)]	Loss: 0.170981
+Train Epoch: 12 [32640/60000 (54%)]	Loss: 0.214183
+Train Epoch: 12 [33280/60000 (55%)]	Loss: 0.307517
+Train Epoch: 12 [33920/60000 (57%)]	Loss: 0.162230
+Train Epoch: 12 [34560/60000 (58%)]	Loss: 0.091161
+Train Epoch: 12 [35200/60000 (59%)]	Loss: 0.124229
+Train Epoch: 12 [35840/60000 (60%)]	Loss: 0.210214
+Train Epoch: 12 [36480/60000 (61%)]	Loss: 0.124937
+Train Epoch: 12 [37120/60000 (62%)]	Loss: 0.209978
+Train Epoch: 12 [37760/60000 (63%)]	Loss: 0.125021
+Train Epoch: 12 [38400/60000 (64%)]	Loss: 0.388049
+Train Epoch: 12 [39040/60000 (65%)]	Loss: 0.112252
+Train Epoch: 12 [39680/60000 (66%)]	Loss: 0.136749
+Train Epoch: 12 [40320/60000 (67%)]	Loss: 0.094696
+Train Epoch: 12 [40960/60000 (68%)]	Loss: 0.199141
+Train Epoch: 12 [41600/60000 (69%)]	Loss: 0.259255
+Train Epoch: 12 [42240/60000 (70%)]	Loss: 0.136808
+Train Epoch: 12 [42880/60000 (71%)]	Loss: 0.098337
+Train Epoch: 12 [43520/60000 (72%)]	Loss: 0.152925
+Train Epoch: 12 [44160/60000 (74%)]	Loss: 0.038694
+Train Epoch: 12 [44800/60000 (75%)]	Loss: 0.241495
+Train Epoch: 12 [45440/60000 (76%)]	Loss: 0.342626
+Train Epoch: 12 [46080/60000 (77%)]	Loss: 0.199387
+Train Epoch: 12 [46720/60000 (78%)]	Loss: 0.115205
+Train Epoch: 12 [47360/60000 (79%)]	Loss: 0.176605
+Train Epoch: 12 [48000/60000 (80%)]	Loss: 0.136905
+Train Epoch: 12 [48640/60000 (81%)]	Loss: 0.233815
+Train Epoch: 12 [49280/60000 (82%)]	Loss: 0.151783
+Train Epoch: 12 [49920/60000 (83%)]	Loss: 0.134583
+Train Epoch: 12 [50560/60000 (84%)]	Loss: 0.186492
+Train Epoch: 12 [51200/60000 (85%)]	Loss: 0.230558
+Train Epoch: 12 [51840/60000 (86%)]	Loss: 0.146272
+Train Epoch: 12 [52480/60000 (87%)]	Loss: 0.206236
+Train Epoch: 12 [53120/60000 (88%)]	Loss: 0.317140
+Train Epoch: 12 [53760/60000 (90%)]	Loss: 0.300279
+Train Epoch: 12 [54400/60000 (91%)]	Loss: 0.216886
+Train Epoch: 12 [55040/60000 (92%)]	Loss: 0.271599
+Train Epoch: 12 [55680/60000 (93%)]	Loss: 0.145031
+Train Epoch: 12 [56320/60000 (94%)]	Loss: 0.199962
+Train Epoch: 12 [56960/60000 (95%)]	Loss: 0.229826
+Train Epoch: 12 [57600/60000 (96%)]	Loss: 0.343808
+Train Epoch: 12 [58240/60000 (97%)]	Loss: 0.295896
+Train Epoch: 12 [58880/60000 (98%)]	Loss: 0.204765
+Train Epoch: 12 [59520/60000 (99%)]	Loss: 0.174116
+5.101703643798828
+
+Test set: Average loss: 0.1160, Accuracy: 9641/10000 (96%)
+
+0.8305680751800537
+Train Epoch: 13 [0/60000 (0%)]	Loss: 0.214931
+Train Epoch: 13 [640/60000 (1%)]	Loss: 0.195012
+Train Epoch: 13 [1280/60000 (2%)]	Loss: 0.156017
+Train Epoch: 13 [1920/60000 (3%)]	Loss: 0.210651
+Train Epoch: 13 [2560/60000 (4%)]	Loss: 0.093656
+Train Epoch: 13 [3200/60000 (5%)]	Loss: 0.190131
+Train Epoch: 13 [3840/60000 (6%)]	Loss: 0.533997
+Train Epoch: 13 [4480/60000 (7%)]	Loss: 0.087785
+Train Epoch: 13 [5120/60000 (9%)]	Loss: 0.232129
+Train Epoch: 13 [5760/60000 (10%)]	Loss: 0.351137
+Train Epoch: 13 [6400/60000 (11%)]	Loss: 0.157218
+Train Epoch: 13 [7040/60000 (12%)]	Loss: 0.336228
+Train Epoch: 13 [7680/60000 (13%)]	Loss: 0.224272
+Train Epoch: 13 [8320/60000 (14%)]	Loss: 0.111894
+Train Epoch: 13 [8960/60000 (15%)]	Loss: 0.134768
+Train Epoch: 13 [9600/60000 (16%)]	Loss: 0.220353
+Train Epoch: 13 [10240/60000 (17%)]	Loss: 0.233955
+Train Epoch: 13 [10880/60000 (18%)]	Loss: 0.126105
+Train Epoch: 13 [11520/60000 (19%)]	Loss: 0.220254
+Train Epoch: 13 [12160/60000 (20%)]	Loss: 0.212138
+Train Epoch: 13 [12800/60000 (21%)]	Loss: 0.134709
+Train Epoch: 13 [13440/60000 (22%)]	Loss: 0.223375
+Train Epoch: 13 [14080/60000 (23%)]	Loss: 0.214842
+Train Epoch: 13 [14720/60000 (25%)]	Loss: 0.141600
+Train Epoch: 13 [15360/60000 (26%)]	Loss: 0.170465
+Train Epoch: 13 [16000/60000 (27%)]	Loss: 0.155312
+Train Epoch: 13 [16640/60000 (28%)]	Loss: 0.250655
+Train Epoch: 13 [17280/60000 (29%)]	Loss: 0.168154
+Train Epoch: 13 [17920/60000 (30%)]	Loss: 0.269139
+Train Epoch: 13 [18560/60000 (31%)]	Loss: 0.236847
+Train Epoch: 13 [19200/60000 (32%)]	Loss: 0.188713
+Train Epoch: 13 [19840/60000 (33%)]	Loss: 0.068613
+Train Epoch: 13 [20480/60000 (34%)]	Loss: 0.118021
+Train Epoch: 13 [21120/60000 (35%)]	Loss: 0.137161
+Train Epoch: 13 [21760/60000 (36%)]	Loss: 0.160205
+Train Epoch: 13 [22400/60000 (37%)]	Loss: 0.347757
+Train Epoch: 13 [23040/60000 (38%)]	Loss: 0.177438
+Train Epoch: 13 [23680/60000 (39%)]	Loss: 0.321974
+Train Epoch: 13 [24320/60000 (41%)]	Loss: 0.162954
+Train Epoch: 13 [24960/60000 (42%)]	Loss: 0.364216
+Train Epoch: 13 [25600/60000 (43%)]	Loss: 0.106964
+Train Epoch: 13 [26240/60000 (44%)]	Loss: 0.056362
+Train Epoch: 13 [26880/60000 (45%)]	Loss: 0.180460
+Train Epoch: 13 [27520/60000 (46%)]	Loss: 0.283349
+Train Epoch: 13 [28160/60000 (47%)]	Loss: 0.089986
+Train Epoch: 13 [28800/60000 (48%)]	Loss: 0.283601
+Train Epoch: 13 [29440/60000 (49%)]	Loss: 0.113444
+Train Epoch: 13 [30080/60000 (50%)]	Loss: 0.253790
+Train Epoch: 13 [30720/60000 (51%)]	Loss: 0.091974
+Train Epoch: 13 [31360/60000 (52%)]	Loss: 0.214363
+Train Epoch: 13 [32000/60000 (53%)]	Loss: 0.102761
+Train Epoch: 13 [32640/60000 (54%)]	Loss: 0.075470
+Train Epoch: 13 [33280/60000 (55%)]	Loss: 0.163235
+Train Epoch: 13 [33920/60000 (57%)]	Loss: 0.076091
+Train Epoch: 13 [34560/60000 (58%)]	Loss: 0.064465
+Train Epoch: 13 [35200/60000 (59%)]	Loss: 0.140796
+Train Epoch: 13 [35840/60000 (60%)]	Loss: 0.183128
+Train Epoch: 13 [36480/60000 (61%)]	Loss: 0.196903
+Train Epoch: 13 [37120/60000 (62%)]	Loss: 0.078853
+Train Epoch: 13 [37760/60000 (63%)]	Loss: 0.032101
+Train Epoch: 13 [38400/60000 (64%)]	Loss: 0.147808
+Train Epoch: 13 [39040/60000 (65%)]	Loss: 0.291870
+Train Epoch: 13 [39680/60000 (66%)]	Loss: 0.208462
+Train Epoch: 13 [40320/60000 (67%)]	Loss: 0.168460
+Train Epoch: 13 [40960/60000 (68%)]	Loss: 0.258297
+Train Epoch: 13 [41600/60000 (69%)]	Loss: 0.226349
+Train Epoch: 13 [42240/60000 (70%)]	Loss: 0.149564
+Train Epoch: 13 [42880/60000 (71%)]	Loss: 0.383584
+Train Epoch: 13 [43520/60000 (72%)]	Loss: 0.093568
+Train Epoch: 13 [44160/60000 (74%)]	Loss: 0.104716
+Train Epoch: 13 [44800/60000 (75%)]	Loss: 0.144623
+Train Epoch: 13 [45440/60000 (76%)]	Loss: 0.064298
+Train Epoch: 13 [46080/60000 (77%)]	Loss: 0.167453
+Train Epoch: 13 [46720/60000 (78%)]	Loss: 0.226858
+Train Epoch: 13 [47360/60000 (79%)]	Loss: 0.200718
+Train Epoch: 13 [48000/60000 (80%)]	Loss: 0.169319
+Train Epoch: 13 [48640/60000 (81%)]	Loss: 0.323389
+Train Epoch: 13 [49280/60000 (82%)]	Loss: 0.283815
+Train Epoch: 13 [49920/60000 (83%)]	Loss: 0.164176
+Train Epoch: 13 [50560/60000 (84%)]	Loss: 0.340789
+Train Epoch: 13 [51200/60000 (85%)]	Loss: 0.257281
+Train Epoch: 13 [51840/60000 (86%)]	Loss: 0.310681
+Train Epoch: 13 [52480/60000 (87%)]	Loss: 0.264917
+Train Epoch: 13 [53120/60000 (88%)]	Loss: 0.114229
+Train Epoch: 13 [53760/60000 (90%)]	Loss: 0.121649
+Train Epoch: 13 [54400/60000 (91%)]	Loss: 0.132437
+Train Epoch: 13 [55040/60000 (92%)]	Loss: 0.144826
+Train Epoch: 13 [55680/60000 (93%)]	Loss: 0.139385
+Train Epoch: 13 [56320/60000 (94%)]	Loss: 0.241362
+Train Epoch: 13 [56960/60000 (95%)]	Loss: 0.170711
+Train Epoch: 13 [57600/60000 (96%)]	Loss: 0.271185
+Train Epoch: 13 [58240/60000 (97%)]	Loss: 0.108642
+Train Epoch: 13 [58880/60000 (98%)]	Loss: 0.130507
+Train Epoch: 13 [59520/60000 (99%)]	Loss: 0.089427
+5.257996320724487
+
+Test set: Average loss: 0.1159, Accuracy: 9647/10000 (96%)
+
+0.8556327819824219
+Train Epoch: 14 [0/60000 (0%)]	Loss: 0.200973
+Train Epoch: 14 [640/60000 (1%)]	Loss: 0.097943
+Train Epoch: 14 [1280/60000 (2%)]	Loss: 0.139002
+Train Epoch: 14 [1920/60000 (3%)]	Loss: 0.328479
+Train Epoch: 14 [2560/60000 (4%)]	Loss: 0.116436
+Train Epoch: 14 [3200/60000 (5%)]	Loss: 0.134403
+Train Epoch: 14 [3840/60000 (6%)]	Loss: 0.078760
+Train Epoch: 14 [4480/60000 (7%)]	Loss: 0.198676
+Train Epoch: 14 [5120/60000 (9%)]	Loss: 0.201019
+Train Epoch: 14 [5760/60000 (10%)]	Loss: 0.198020
+Train Epoch: 14 [6400/60000 (11%)]	Loss: 0.177925
+Train Epoch: 14 [7040/60000 (12%)]	Loss: 0.142802
+Train Epoch: 14 [7680/60000 (13%)]	Loss: 0.090331
+Train Epoch: 14 [8320/60000 (14%)]	Loss: 0.151893
+Train Epoch: 14 [8960/60000 (15%)]	Loss: 0.186440
+Train Epoch: 14 [9600/60000 (16%)]	Loss: 0.189179
+Train Epoch: 14 [10240/60000 (17%)]	Loss: 0.259259
+Train Epoch: 14 [10880/60000 (18%)]	Loss: 0.105833
+Train Epoch: 14 [11520/60000 (19%)]	Loss: 0.264628
+Train Epoch: 14 [12160/60000 (20%)]	Loss: 0.134884
+Train Epoch: 14 [12800/60000 (21%)]	Loss: 0.163858
+Train Epoch: 14 [13440/60000 (22%)]	Loss: 0.256714
+Train Epoch: 14 [14080/60000 (23%)]	Loss: 0.275466
+Train Epoch: 14 [14720/60000 (25%)]	Loss: 0.189811
+Train Epoch: 14 [15360/60000 (26%)]	Loss: 0.124537
+Train Epoch: 14 [16000/60000 (27%)]	Loss: 0.183956
+Train Epoch: 14 [16640/60000 (28%)]	Loss: 0.089484
+Train Epoch: 14 [17280/60000 (29%)]	Loss: 0.184057
+Train Epoch: 14 [17920/60000 (30%)]	Loss: 0.358359
+Train Epoch: 14 [18560/60000 (31%)]	Loss: 0.316923
+Train Epoch: 14 [19200/60000 (32%)]	Loss: 0.265280
+Train Epoch: 14 [19840/60000 (33%)]	Loss: 0.096003
+Train Epoch: 14 [20480/60000 (34%)]	Loss: 0.189907
+Train Epoch: 14 [21120/60000 (35%)]	Loss: 0.152218
+Train Epoch: 14 [21760/60000 (36%)]	Loss: 0.226317
+Train Epoch: 14 [22400/60000 (37%)]	Loss: 0.345483
+Train Epoch: 14 [23040/60000 (38%)]	Loss: 0.336329
+Train Epoch: 14 [23680/60000 (39%)]	Loss: 0.218471
+Train Epoch: 14 [24320/60000 (41%)]	Loss: 0.263707
+Train Epoch: 14 [24960/60000 (42%)]	Loss: 0.312835
+Train Epoch: 14 [25600/60000 (43%)]	Loss: 0.352499
+Train Epoch: 14 [26240/60000 (44%)]	Loss: 0.092450
+Train Epoch: 14 [26880/60000 (45%)]	Loss: 0.157819
+Train Epoch: 14 [27520/60000 (46%)]	Loss: 0.194620
+Train Epoch: 14 [28160/60000 (47%)]	Loss: 0.103875
+Train Epoch: 14 [28800/60000 (48%)]	Loss: 0.119761
+Train Epoch: 14 [29440/60000 (49%)]	Loss: 0.059659
+Train Epoch: 14 [30080/60000 (50%)]	Loss: 0.194034
+Train Epoch: 14 [30720/60000 (51%)]	Loss: 0.193755
+Train Epoch: 14 [31360/60000 (52%)]	Loss: 0.302108
+Train Epoch: 14 [32000/60000 (53%)]	Loss: 0.056308
+Train Epoch: 14 [32640/60000 (54%)]	Loss: 0.201722
+Train Epoch: 14 [33280/60000 (55%)]	Loss: 0.100013
+Train Epoch: 14 [33920/60000 (57%)]	Loss: 0.204485
+Train Epoch: 14 [34560/60000 (58%)]	Loss: 0.324283
+Train Epoch: 14 [35200/60000 (59%)]	Loss: 0.115922
+Train Epoch: 14 [35840/60000 (60%)]	Loss: 0.165000
+Train Epoch: 14 [36480/60000 (61%)]	Loss: 0.327037
+Train Epoch: 14 [37120/60000 (62%)]	Loss: 0.280950
+Train Epoch: 14 [37760/60000 (63%)]	Loss: 0.180071
+Train Epoch: 14 [38400/60000 (64%)]	Loss: 0.159498
+Train Epoch: 14 [39040/60000 (65%)]	Loss: 0.279855
+Train Epoch: 14 [39680/60000 (66%)]	Loss: 0.084716
+Train Epoch: 14 [40320/60000 (67%)]	Loss: 0.067469
+Train Epoch: 14 [40960/60000 (68%)]	Loss: 0.275033
+Train Epoch: 14 [41600/60000 (69%)]	Loss: 0.202933
+Train Epoch: 14 [42240/60000 (70%)]	Loss: 0.164865
+Train Epoch: 14 [42880/60000 (71%)]	Loss: 0.145607
+Train Epoch: 14 [43520/60000 (72%)]	Loss: 0.246287
+Train Epoch: 14 [44160/60000 (74%)]	Loss: 0.165943
+Train Epoch: 14 [44800/60000 (75%)]	Loss: 0.159812
+Train Epoch: 14 [45440/60000 (76%)]	Loss: 0.299708
+Train Epoch: 14 [46080/60000 (77%)]	Loss: 0.128675
+Train Epoch: 14 [46720/60000 (78%)]	Loss: 0.136951
+Train Epoch: 14 [47360/60000 (79%)]	Loss: 0.210752
+Train Epoch: 14 [48000/60000 (80%)]	Loss: 0.425428
+Train Epoch: 14 [48640/60000 (81%)]	Loss: 0.206298
+Train Epoch: 14 [49280/60000 (82%)]	Loss: 0.278026
+Train Epoch: 14 [49920/60000 (83%)]	Loss: 0.092974
+Train Epoch: 14 [50560/60000 (84%)]	Loss: 0.139454
+Train Epoch: 14 [51200/60000 (85%)]	Loss: 0.148707
+Train Epoch: 14 [51840/60000 (86%)]	Loss: 0.200288
+Train Epoch: 14 [52480/60000 (87%)]	Loss: 0.232255
+Train Epoch: 14 [53120/60000 (88%)]	Loss: 0.196454
+Train Epoch: 14 [53760/60000 (90%)]	Loss: 0.248975
+Train Epoch: 14 [54400/60000 (91%)]	Loss: 0.359078
+Train Epoch: 14 [55040/60000 (92%)]	Loss: 0.134122
+Train Epoch: 14 [55680/60000 (93%)]	Loss: 0.047688
+Train Epoch: 14 [56320/60000 (94%)]	Loss: 0.292845
+Train Epoch: 14 [56960/60000 (95%)]	Loss: 0.319522
+Train Epoch: 14 [57600/60000 (96%)]	Loss: 0.341668
+Train Epoch: 14 [58240/60000 (97%)]	Loss: 0.229322
+Train Epoch: 14 [58880/60000 (98%)]	Loss: 0.086015
+Train Epoch: 14 [59520/60000 (99%)]	Loss: 0.230154
+5.127849578857422
+
+Test set: Average loss: 0.1160, Accuracy: 9648/10000 (96%)
+
+0.8354103565216064
+5.12946093082428
+0.8326440538678851
+

@@ -50,15 +50,19 @@ project_handin_Lab2
 ||CUDA版本|&nbsp; &nbsp; CUDA Version 11.0.228|
 ||||
 
+
+
+#### 注：以下时间花销的测量均在电脑未插电情况下完成，若电脑插电，则训练时长会减小约2.7s，测试时长减小约0.2s
+
 ### 实验结果1（Linear层为例）
 
 |||||||
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
-| 实现方式（Linear层为例）| &nbsp; epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
-|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 8.388102684702192 | 1.1764095340456282 |&nbsp; &nbsp; &nbsp; 0.0295 &nbsp;|&nbsp; 9895/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
-|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 7.718833548682077 | 1.0303474494389124 |&nbsp; &nbsp; &nbsp; 0.0272 &nbsp;|&nbsp; 9909/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+| 实现方式（Linear层为例）|  epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp;&nbsp;&nbsp; 14 &nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp;| 8.388102684702192 | 1.1764095340456282 |&nbsp; &nbsp; &nbsp; 0.0295 &nbsp;|&nbsp; 9895/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp;| 7.718833548682077 | 1.0303474494389124 |&nbsp; &nbsp; &nbsp; 0.0272 &nbsp;|&nbsp; 9909/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 ||||||||
 
 ### 实验结果2（Conv2d层为例）
@@ -66,10 +70,9 @@ project_handin_Lab2
 |||||||
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
-| 实现方式（Linear层为例）| &nbsp; epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
-|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 7.865629860333034 | 1.0374169519969396 |&nbsp; &nbsp; &nbsp; 0.1167 &nbsp;|&nbsp; 9641/10000<br>&nbsp; &nbsp; &nbsp; (96%) |
-|<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 7.824958835329328 | 1.0204006263187952 |&nbsp; &nbsp; &nbsp; 0.1148 &nbsp;|&nbsp; 9659/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
+| 实现方式（Conv2d层为例）| epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp;&nbsp; 14 &nbsp;&nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp;| 7.865629860333034 | 1.0374169519969396 |&nbsp; &nbsp; &nbsp; 0.1167 &nbsp;|&nbsp; 9641/10000<br>&nbsp; &nbsp; &nbsp; (96%) |
 ||||||||
 
 ### 实验结果3（Linear+Conv2d层为例）
@@ -89,11 +92,11 @@ project_handin_Lab2
     1.	对于训练平均时间和测试平均时间，PyTorch原有张量运算的时间开销最小，定制化张量运算比原有张量运算时间开销大，其中基于C++ API比基于Python API时间开销小；
     2.	对于测试数据上的平均损失率和准确率，PyTorch原有张量运算和基于两种API的定制化张量运算的测试损失率和准确率相差不大，即均有很高的准确率。
 2.	基于Python和C++ API对Conv2d层实现定制化张量运算（见实验结果1）的结果显示，在训练次数均为14个epoch时：
-    1.	对于训练平均时间和测试平均时间，PyTorch原有张量运算的时间开销最小，定制化张量运算比原有张量运算时间开销大，其中基于C++ API比基于Python API时间开销小；
-    2.	对于测试数据上的平均损失率和准确率，PyTorch原有张量运算和基于两种API的定制化张量运算的测试损失率和准确率相差不大，即均有很高的准确率。
+    1.	对于训练平均时间和测试平均时间，PyTorch原有张量运算的时间开销最小，定制化张量运算时间开销稍大；
+    2.	对于测试数据上的平均损失率和准确率，PyTorch原有张量运算和定制化张量运算的测试损失率和准确率相差较大，自定义多通道二维卷积层的测试性能较差。
 3.	基于Python和C++ API对Linear和Conv2d层实现定制化张量运算（见实验结果2）的结果显示，在训练次数均为14个epoch时：
     1.	对于训练平均时间和测试平均时间，PyTorch原有张量运算的时间开销最小，定制化张量运算比原有张量运算时间开销大，其中基于C++ API比基于Python API时间开销小；
-    2.	对于测试数据上的平均损失率和准确率，PyTorch原有张量运算的准确率高达99%，但是基于两种API的定制化张量运算的测试损失率和准确率却不如前者，准确率仅有97%（我之前在PyTorch原有张量运算的基础上用全连接FNN网络，其中只有一层隐藏层（大小为256），准确率也有97%），可见当把PyTorch的二维卷积运算替换成自定义卷积核的卷积操作时，该网络的性能几乎失去了卷积层的优势，损失率和准确率与单隐藏层的全连接前馈网络基本无异，原因分析见`实验总结与思考`模块。
+    2.	对于测试数据上的平均损失率和准确率，PyTorch原有张量运算的准确率高达99%，但是基于两种API的定制化张量运算的测试损失率和准确率却不如前者，准确率仅有97%（我之前在PyTorch原有张量运算的基础上用全连接FNN网络，其中只有一层隐藏层（大小为256），准确率也有97%），可见当把PyTorch的二维卷积运算替换成自定义卷积核的卷积操作时，该网络的性能几乎失去了卷积层的优势，损失率和准确率与单隐藏层的全连接前馈网络基本无异，可以说自定义多通道二维卷积层的性能在整个网络的性能评估上起主要作用（即整个网络的性能由最差的一个环节决定），原因分析见`实验总结与思考`模块。
 
 ### 实验总结与思考
 

@@ -30,11 +30,15 @@ project_handin_Lab2
 
     代码名称：`linear_handin_cpp.py`
 
-4.	基于Python API实现定制化张量运算Linear+Conv2d
+4.	基于Python API实现定制化张量运算Conv2d
+
+    代码名称：`multiconv2d_handin.py`
+
+5.	基于Python API实现定制化张量运算Linear+Conv2d
 
     代码名称：`linear_multiconv2d_handin.py`
 
-5.	基于C++ API实现定制化张量运算Linear+Conv2d
+6.	基于C++ API实现定制化张量运算Linear+Conv2d
 
     代码名称：`linear_multiconv2d_handin_cpp.py`
 
@@ -52,7 +56,7 @@ project_handin_Lab2
 
 
 
-#### 注：以下时间花销的测量均在电脑未插电情况下完成，若电脑插电，则训练时长会减小约2.7s，测试时长减小约0.2s
+#### 注：以下时间花销的测量均在电脑未插电情况下完成，若电脑插电，则训练平均时长会减小约2.7s，测试平均时长减小约0.2s
 
 ### 实验结果1（Linear层为例）
 
@@ -107,7 +111,7 @@ project_handin_Lab2
     1.	神经网络目前是否有比较有说服力的参数调整的理论解释？
     2.	目前深度学习的突破点有哪些？以及这些突破点的灵感是否有很多都继承于传统机器学习的方法？
 
-## 具体步骤
+### 具体步骤
 
 1.	在MNIST的模型样例中，选择线性层（Linear）张量运算进行定制化实现
 
@@ -134,6 +138,6 @@ project_handin_Lab2
 
 7.	【可选实验，加分】实现卷积层（Convolutional）的自定义张量运算
 
-## 参考资料
+### 参考资料
 
 * EXTENDING PYTORCH: https://pytorch.org/docs/master/notes/extending.html

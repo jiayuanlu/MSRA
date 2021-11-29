@@ -63,7 +63,7 @@
 |||
 |---------------|---------------------------|
 |<br/>&nbsp;<br/>神经网络数据流图<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143921374-01ba8929-80c8-4b2b-9447-3037b44bdb3d.png)|
-|<br/>&nbsp;<br/>损失和正确率趋势图<br/>&nbsp;<br/>&nbsp;||
+|<br/>&nbsp;<br/>损失和正确率趋势图<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143924011-f638429a-afa5-4831-824e-f7f6e4ee6dc6.png) 64|
 |<br/>&nbsp;<br/>网络分析，使用率前十名的操作<br/>&nbsp;<br/>&nbsp;||
 ||||
 ![图片](https://user-images.githubusercontent.com/90028974/143922140-fea353e6-7d3b-4202-8523-8a401eacc07a.png) 16

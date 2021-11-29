@@ -56,7 +56,7 @@ project_handin_Lab2
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
 | 实现方式（Linear层为例）| &nbsp; epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 |<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 8.388102684702192 | 1.1764095340456282 |&nbsp; &nbsp; &nbsp; 0.0295 &nbsp;|&nbsp; 9895/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 |<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; &nbsp; 14 &nbsp;| 7.718833548682077 | 1.0303474494389124 |&nbsp; &nbsp; &nbsp; 0.0272 &nbsp;|&nbsp; 9909/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 ||||||||
@@ -67,7 +67,7 @@ project_handin_Lab2
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 |||| &nbsp; &nbsp; &nbsp; 性能评测 |
 | &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  实现方式<br/> &nbsp;（Linear+Conv2d层为例）| &nbsp; epoch | train_time/epoch(s) | test_time/epoch(s) | test_loss/epoch | test_acc/epoch |
-|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
+|<br/> <br/>PyTorch原有张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; &nbsp;| 7.634793383734567 | 0.9857945612498692 |&nbsp; &nbsp; &nbsp; 0.0277 &nbsp;|&nbsp; 9917/10000<br>&nbsp; &nbsp; &nbsp; (99%) |
 |<br/> <br/>基于Python API的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp;| 7.964399627276829 | 1.0546047346932548 |&nbsp; &nbsp; &nbsp; 0.1101 &nbsp;|&nbsp; 9656/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
 |<br/> <br/>基于C++的定制化张量运算<br/> <br/>&nbsp;|&nbsp; &nbsp; 14 &nbsp;| 7.806821141924177 | 1.004484840801784 |&nbsp; &nbsp; &nbsp; 0.1099 &nbsp;|&nbsp; 9655/10000<br>&nbsp; &nbsp; &nbsp; (97%) |
 ||||||||

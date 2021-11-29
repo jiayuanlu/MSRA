@@ -62,7 +62,7 @@
    
 |||
 |---------------|---------------------------|
-|<br/>&nbsp;<br/>神经网络数据流图<br/>&nbsp;<br/>&nbsp;|![image](Lab 1/images/mnist_experiment_1(1).png) |
+|<br/>&nbsp;<br/>神经网络数据流图<br/>&nbsp;<br/>&nbsp;|![image](https://github.com/jiayuanlu/MSRA/blob/4407f72fd9af43f03a477c9d787c329273fcb726/Lab%201/images/mnist_experiment_1(1).png) |
 |<br/>&nbsp;<br/>损失和正确率趋势图<br/>&nbsp;<br/>&nbsp;||
 |<br/>&nbsp;<br/>网络分析，使用率前十名的操作<br/>&nbsp;<br/>&nbsp;||
 ||||

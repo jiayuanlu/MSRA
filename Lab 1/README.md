@@ -64,9 +64,9 @@ project_handin_Lab1
 |||
 |------|--------------|
 |批大小 &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 结果比较 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981125-aa4d3fb1-29c1-4146-8696-2c6ce9daf5ae.png)|
-|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981186-56b858c4-b4dc-4773-ab51-0ddb835a0f40.png)|
-|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981253-effb4157-7a02-4ac1-b9d0-8e9c02ae1d74.png)|
+|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044033-7d3f9b63-7c8e-4c24-9773-0d95d0843191.png)|
+|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044090-d0e0287a-982c-4180-be82-d1b125dd80fa.png)|
+|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044143-1e763060-37df-49d1-b64b-eeab25300fb3.png)|
 |||
 
     ii.CPU版：
@@ -74,9 +74,9 @@ project_handin_Lab1
 |||
 |------|--------------|
 |批大小 &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 结果比较 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144005009-c3b26ea7-b0e3-4b02-a6a5-eb03e78916bd.png)|
-|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144005077-8f89c8ed-c506-4542-b91f-539766597be6.png)|
-|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144005137-38ec2118-dd88-4964-96a5-6035adf6a739.png)|
+|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044197-3a918570-465c-4165-86d7-e4b3b79dbbed.png)|
+|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044256-74af8fd2-9709-4ce8-b656-c775ab78cfac.png)|
+|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044305-336245c0-b049-4072-9f9b-088743b9b549.png)|
 |||
 
 ### 实验结果分析

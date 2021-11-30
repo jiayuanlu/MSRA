@@ -4,7 +4,7 @@ project_handin_Lab1 & Lab2
 
 Ada Camp 人工智能系统 
 
-卢佳源 西安交通大学 专业班级：人工智能91
+姓名：卢佳源 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学校：西安交通大学 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 专业班级：人工智能91
 
 ## 实验报告（Lab 1 & Lab 2）
 

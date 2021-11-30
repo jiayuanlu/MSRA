@@ -5,44 +5,24 @@
 1. 了解深度学习框架及工作流程（Deep Learning Workload）
 2. 了解在不同硬件和批大小（batch_size）条件下，张量运算产生的开销
 
-
-## 实验环境
-
-* PyTorch==1.5.0
-
-* TensorFlow>=1.15.0
-
-* 【可选环境】 单机Nvidia GPU with CUDA 10.0
-
-
 ## 实验原理
 
 通过在深度学习框架上调试和运行样例程序，观察不同配置下的运行结果，了解深度学习系统的工作流程。
 
-## 实验内容
+### 文件功能介绍
 
-### 实验流程图
+1.	MNIST样例程序：
 
-![](/imgs/Lab1-flow.png "Lab1 flow chat")
+    代码名称：`mnist_basic.py`
 
-### 具体步骤
+2.	可视化模型结构、正确率、损失值
 
-1.	安装依赖包。PyTorch==1.5, TensorFlow>=1.15.0
+    代码名称：`mnist_tensorboard.py`
 
-2.	下载并运行PyTorch仓库中提供的MNIST样例程序。
+3.	网络性能分析
 
-3.	修改样例代码，保存网络信息，并使用TensorBoard画出神经网络数据流图。
+    代码名称：`mnist_profiler.py`
 
-4.	继续修改样例代码，记录并保存训练时正确率和损失值，使用TensorBoard画出损失和正确率趋势图。
-
-5.	添加神经网络分析功能（profiler），并截取使用率前十名的操作。
-
-6.	更改批次大小为1，16，64，再执行分析程序，并比较结果。
-
-7.	【可选实验】改变硬件配置（e.g.: 使用/ 不使用GPU），重新执行分析程序，并比较结果。
-
-
-## 实验报告
 
 ### 实验环境
 
@@ -78,23 +58,22 @@
 |<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981253-effb4157-7a02-4ac1-b9d0-8e9c02ae1d74.png)|
 |||
 
-## 参考代码
+### 具体步骤
 
-1.	MNIST样例程序：
+1.	安装依赖包。PyTorch==1.5, TensorFlow>=1.15.0
 
-    代码位置：Lab1/mnist_basic.py
+2.	下载并运行PyTorch仓库中提供的MNIST样例程序。
 
-    运行命令：`python mnist_basic.py`
+3.	修改样例代码，保存网络信息，并使用TensorBoard画出神经网络数据流图。
 
-2.	可视化模型结构、正确率、损失值
+4.	继续修改样例代码，记录并保存训练时正确率和损失值，使用TensorBoard画出损失和正确率趋势图。
 
-    代码位置：Lab1/mnist_tensorboard.py
+5.	添加神经网络分析功能（profiler），并截取使用率前十名的操作。
 
-    运行命令：`python mnist_tensorboard.py`
+6.	更改批次大小为1，16，64，再执行分析程序，并比较结果。
 
-3.	网络性能分析
+7.	【可选实验】改变硬件配置（e.g.: 使用/ 不使用GPU），重新执行分析程序，并比较结果。
 
-    代码位置：Lab1/mnist_profiler.py
 
 ## 参考资料
 

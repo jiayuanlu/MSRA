@@ -1,0 +1,44 @@
+按CPU time avg指标截取的前十名的操作：
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     aten::conv2d         0.09%       1.414us        43.23%     657.767us     657.767us             1  
+                aten::convolution         0.11%       1.621us        43.13%     656.353us     656.353us             1  
+               aten::_convolution         0.60%       9.073us        43.03%     654.732us     654.732us             1  
+         aten::mkldnn_convolution        42.15%     641.406us        42.40%     645.179us     645.179us             1  
+                     aten::conv2d         0.48%       7.328us        14.79%     225.064us     225.064us             1  
+                aten::convolution         0.36%       5.512us        14.31%     217.736us     217.736us             1  
+                      aten::addmm        13.61%     207.101us        14.13%     215.043us     215.043us             1  
+               aten::_convolution         0.96%      14.681us        13.95%     212.224us     212.224us             1  
+       aten::_convolution_nogroup         1.04%      15.824us        12.92%     196.630us     196.630us             1  
+                aten::thnn_conv2d         0.31%       4.666us        11.38%     173.214us     173.214us             1  
+        
+按CPU total %指标截取的前十名的操作：                
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------            
+                     aten::conv2d         0.09%       1.414us        43.23%     657.767us     657.767us             1  
+                aten::convolution         0.11%       1.621us        43.13%     656.353us     656.353us             1  
+               aten::_convolution         0.60%       9.073us        43.03%     654.732us     654.732us             1  
+         aten::mkldnn_convolution        42.15%     641.406us        42.40%     645.179us     645.179us             1  
+                     aten::conv2d         0.48%       7.328us        14.79%     225.064us     225.064us             1  
+                aten::convolution         0.36%       5.512us        14.31%     217.736us     217.736us             1  
+                      aten::addmm        13.61%     207.101us        14.13%     215.043us     215.043us             1  
+               aten::_convolution         0.96%      14.681us        13.95%     212.224us     212.224us             1  
+       aten::_convolution_nogroup         1.04%      15.824us        12.92%     196.630us     196.630us             1  
+                aten::thnn_conv2d         0.31%       4.666us        11.38%     173.214us     173.214us             1  
+
+按Self CPU %指标截取的前十名的操作：                
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------             
+         aten::mkldnn_convolution        42.15%     641.406us        42.40%     645.179us     645.179us             1  
+                      aten::addmm        13.61%     207.101us        14.13%     215.043us     215.043us             1  
+    aten::max_pool2d_with_indices         8.12%     123.500us         8.29%     126.211us     126.211us             1  
+        aten::thnn_conv2d_forward         4.64%      70.656us        11.08%     168.548us     168.548us             1  
+                     aten::addmm_         4.40%      66.921us         4.40%      66.921us      66.921us             1  
+                 aten::bernoulli_         2.17%      32.989us         2.20%      33.452us      33.452us             1  
+                       aten::div_         1.39%      21.082us         2.23%      33.951us      33.951us             1  
+       aten::_convolution_nogroup         1.04%      15.824us        12.92%     196.630us     196.630us             1   
+                  aten::threshold         0.98%      14.866us         1.09%      16.517us      16.517us             1  
+                  aten::threshold         0.97%      14.802us         1.06%      16.119us      16.119us             1       

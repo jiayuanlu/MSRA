@@ -1,0 +1,44 @@
+按CPU time avg指标截取的前十名的操作：
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     aten::conv2d         0.02%       1.734us         1.44%     142.328us     142.328us             1  
+                aten::convolution         0.02%       2.162us         1.42%     140.594us     140.594us             1  
+               aten::_convolution         0.09%       9.164us         1.40%     138.432us     138.432us             1  
+          aten::cudnn_convolution         1.08%     106.708us         1.12%     111.236us     111.236us             1                 
+            aten::feature_dropout         0.13%      12.837us         0.85%      84.209us      84.209us             1  
+            aten::feature_dropout         0.05%       4.975us         0.44%      43.893us      43.893us             1  
+                       aten::relu         0.13%      12.512us         0.42%      41.472us      41.472us             1  
+                      aten::addmm         0.34%      33.606us         0.39%      38.202us      38.202us             1   
+                 aten::max_pool2d         0.07%       6.682us         0.38%      37.965us      37.965us             1  
+                aten::log_softmax         0.04%       4.190us         0.33%      33.118us      33.118us             1                       
+
+按CPU total %指标截取的前十名的操作：                
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------                 
+                     aten::conv2d         0.07%       7.347us        84.46%       8.360ms       8.360ms             1  
+                aten::convolution         0.07%       6.937us        84.38%       8.352ms       8.352ms             1  
+               aten::_convolution         0.25%      24.707us        84.31%       8.345ms       8.345ms             1  
+          aten::cudnn_convolution        83.45%       8.260ms        83.61%       8.275ms       8.275ms             1  
+                      aten::addmm        10.35%       1.025ms        10.41%       1.030ms       1.030ms             1  
+                     aten::conv2d         0.02%       1.734us         1.44%     142.328us     142.328us             1  
+                aten::convolution         0.02%       2.162us         1.42%     140.594us     140.594us             1  
+               aten::_convolution         0.09%       9.164us         1.40%     138.432us     138.432us             1      
+          aten::cudnn_convolution         1.08%     106.708us         1.12%     111.236us     111.236us             1  
+            aten::feature_dropout         0.05%       4.975us         0.44%      43.893us      43.893us             1           
+
+按Self CPU %指标截取的前十名的操作：                
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------             
+          aten::cudnn_convolution        83.45%       8.260ms        83.61%       8.275ms       8.275ms             1  
+                      aten::addmm        10.35%       1.025ms        10.41%       1.030ms       1.030ms             1  
+          aten::cudnn_convolution         1.08%     106.708us         1.12%     111.236us     111.236us             1  
+                      aten::addmm         0.34%      33.606us         0.39%      38.202us      38.202us             1  
+                       aten::add_         0.33%      32.591us         0.33%      32.591us      32.591us             1  
+    aten::max_pool2d_with_indices         0.26%      26.162us         0.32%      31.283us      31.283us             1   
+                       aten::div_         0.26%      26.167us         0.26%      26.167us      26.167us             1  
+               aten::_convolution         0.25%      24.707us        84.31%       8.345ms       8.345ms             1  
+                  aten::threshold         0.25%      24.671us         0.29%      28.960us      28.960us             1  
+               aten::_log_softmax         0.25%      24.833us         0.29%      28.928us      28.928us             1                    

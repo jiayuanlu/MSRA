@@ -49,6 +49,7 @@ project_handin_Lab2
 |硬件环境|CPU（vCPU数目）|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16 &nbsp; &nbsp; |
 ||GPU(型号，数目)|&nbsp; &nbsp; NVIDIA Corporation Device 2520 (rev a1) &nbsp; &nbsp; |
 |||&nbsp; &nbsp; Intel Corporation Device 9a60 (rev 01)&nbsp; &nbsp; |
+|||&nbsp; &nbsp; GeForce RTX 3060显卡（laptop）&nbsp; &nbsp; |
 |软件环境|OS版本|&nbsp; &nbsp; Linux操作系统ubuntu20.04版本|
 ||深度学习框架<br>python包名称及版本|&nbsp; &nbsp; pytorch:1.7.1+cu110|
 ||CUDA版本|&nbsp; &nbsp; CUDA Version 11.0.228|

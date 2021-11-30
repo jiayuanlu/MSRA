@@ -63,12 +63,9 @@
 |||
 |---------------|---------------------------|
 |<br/>&nbsp;<br/>神经网络数据流图<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143921374-01ba8929-80c8-4b2b-9447-3037b44bdb3d.png)|
-|<br/>&nbsp;<br/>损失和正确率趋势图<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143924011-f638429a-afa5-4831-824e-f7f6e4ee6dc6.png) 64|
-|<br/>&nbsp;<br/>网络分析，使用率前十名的操作<br/>&nbsp;<br/>&nbsp;||
+|<br/>&nbsp;<br/>损失和正确率趋势图<br/>&nbsp;<br/>&nbsp;|batch_size=64:<br/>![图片](https://user-images.githubusercontent.com/90028974/143924011-f638429a-afa5-4831-824e-f7f6e4ee6dc6.png)<br/><br/>batch_size=16:<br/>![图片](https://user-images.githubusercontent.com/90028974/143922140-fea353e6-7d3b-4202-8523-8a401eacc07a.png)<br/><br/>batch_size=1:<br/>![图片](https://user-images.githubusercontent.com/90028974/143921144-c7bd2f18-e51d-43a0-8133-4daf146b1f01.png)|
+|<br/>&nbsp;<br/>网络分析，使用率前十名的操作<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981019-1aff070a-24bd-4d74-9fbb-eee762c50715.png)|
 ||||
-![图片](https://user-images.githubusercontent.com/90028974/143922140-fea353e6-7d3b-4202-8523-8a401eacc07a.png) 16
-
-![图片](https://user-images.githubusercontent.com/90028974/143921144-c7bd2f18-e51d-43a0-8133-4daf146b1f01.png) 1
 
 
 2. 网络分析，不同批大小结果比较
@@ -76,9 +73,9 @@
 |||
 |------|--------------|
 |批大小 &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 结果比较 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;||
-|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;||
-|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;||
+|<br/>&nbsp;<br/>1<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981125-aa4d3fb1-29c1-4146-8696-2c6ce9daf5ae.png)|
+|<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981186-56b858c4-b4dc-4773-ab51-0ddb835a0f40.png)|
+|<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/143981253-effb4157-7a02-4ac1-b9d0-8e9c02ae1d74.png)|
 |||
 
 ## 参考代码

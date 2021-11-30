@@ -69,7 +69,7 @@ project_handin_Lab1
 |<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044143-1e763060-37df-49d1-b64b-eeab25300fb3.png)|
 |||
 
-    ii.CPU版：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ii.CPU版：
 
 |||
 |------|--------------|
@@ -78,6 +78,13 @@ project_handin_Lab1
 |<br/>&nbsp;<br/>16<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044256-74af8fd2-9709-4ce8-b656-c775ab78cfac.png)|
 |<br/>&nbsp;<br/>64<br/>&nbsp;<br/>&nbsp;|![图片](https://user-images.githubusercontent.com/90028974/144044305-336245c0-b049-4072-9f9b-088743b9b549.png)|
 |||
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iii.GPU_CUDA_True版：    
+
+||
+|--------------|
+![图片](https://user-images.githubusercontent.com/90028974/144047745-bef55403-b620-4a71-ab4b-96dcd79d7890.png)
+||
 
 ### 实验结果分析
 

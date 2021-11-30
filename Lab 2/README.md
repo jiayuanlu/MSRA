@@ -44,7 +44,11 @@ project_handin_Lab2
     
 7.	性能分析
 
-    文件名称：`profile`
+    文件夹名称：`profile`
+    
+8.	FNN实现
+
+    文件夹名称：`FNN`
 
 ### 实验环境
 

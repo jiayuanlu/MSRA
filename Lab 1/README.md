@@ -35,6 +35,7 @@ project_handin_Lab1
 |硬件环境|CPU（vCPU数目）|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16 &nbsp; &nbsp; |
 ||GPU(型号，数目)|&nbsp; &nbsp; NVIDIA Corporation Device 2520 (rev a1) &nbsp; &nbsp; |
 |||&nbsp; &nbsp; Intel Corporation Device 9a60 (rev 01)&nbsp; &nbsp; |
+|||&nbsp; &nbsp; GeForce RTX 3060显卡（laptop）&nbsp; &nbsp; |
 |软件环境|OS版本|&nbsp; &nbsp; Linux操作系统ubuntu20.04版本|
 ||深度学习框架<br>python包名称及版本|&nbsp; &nbsp; pytorch:1.7.1+cu110|
 ||CUDA版本|&nbsp; &nbsp; CUDA Version 11.0.228|
@@ -81,7 +82,7 @@ project_handin_Lab1
 
 3.	对于在CPU上的运算，与GPU相同的是卷积层操作的时间开销和CPU占用率都是最大的，但是绝大部分的操作在CPU上的平均时间比用GPU训练要小一些，且对CPU的总体占有率比在GPU上训练要更加平均一些，另外，在CPU上训练对于加减乘除运算和卷积层运算的时间开销和CPU占用率的差别比在GPU上训练小一些；
 
-4.	在GPU上训练测试的时间远小于在CPU上的训练和测试时间，且在二者上的整体运算时间均随batch_size的增加而增大，但是在每一个batch_size中的计算时间随batch_size增加而减小；
+4.	在GPU上训练测试的时间远小于在CPU上的训练和测试时间（约15～20倍），且在二者上的整体运算时间均随batch_size的增加而增大，但是在每一个batch_size中的计算时间随batch_size增加而减小；
 
 ### 实验总结与思考
 

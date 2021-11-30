@@ -2,6 +2,8 @@
 
 project_handin_Lab1 & Lab2
 
+Ada Camp 人工智能系统 卢佳源 西安交通大学 人工智能91
+
 ## 实验报告（Lab 1 & Lab 2）
 
 ### 文件目录总览
